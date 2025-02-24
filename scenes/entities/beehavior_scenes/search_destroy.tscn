@@ -1,0 +1,86 @@
+[gd_scene load_steps=15 format=3 uid="uid://cdkol7qx01vug"]
+
+[ext_resource type="Script" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_3whjs"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/composites/selector.gd" id="2_h5pt2"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/composites/sequence.gd" id="3_pleh7"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/ConLeaf_detect_beings.gd" id="4_5ijx1"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/conLeaf_detect_enemy.gd" id="4_utflh"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/action_leaf.gd" id="5_5ym66"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/decorators/succeeder.gd" id="5_w5pc6"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_set_target_player.gd" id="6_3306v"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_start_navigation.gd" id="7_37pfm"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/decorators/time_limiter.gd" id="8_p6uql"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/condLeaf_wait_for_destination.gd" id="9_omjuh"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_stop_navigation.gd" id="10_kx83c"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_get_wander_target.gd" id="11_7e0kf"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/leaves/condition.gd" id="13_vyg5y"]
+
+[node name="search_destroy" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
+script = ExtResource("1_3whjs")
+blackboard = NodePath("@Node@17298")
+actor = NodePath("")
+
+[node name="SelectorComposite" type="Node" parent="."]
+script = ExtResource("2_h5pt2")
+
+[node name="SequenceComposite" type="Node" parent="SelectorComposite"]
+script = ExtResource("3_pleh7")
+
+[node name="ConditionLeaf" type="Node" parent="SelectorComposite/SequenceComposite"]
+script = ExtResource("4_5ijx1")
+
+[node name="AlwaysSucceedDecorator" type="Node" parent="SelectorComposite/SequenceComposite"]
+script = ExtResource("5_w5pc6")
+
+[node name="attackPlayer" type="Node" parent="SelectorComposite/SequenceComposite/AlwaysSucceedDecorator"]
+script = ExtResource("2_h5pt2")
+
+[node name="attack" type="Node" parent="SelectorComposite/SequenceComposite/AlwaysSucceedDecorator/attackPlayer"]
+script = ExtResource("3_pleh7")
+
+[node name="InRange" type="Node" parent="SelectorComposite/SequenceComposite/AlwaysSucceedDecorator/attackPlayer/attack"]
+script = ExtResource("4_utflh")
+
+[node name="Damage" type="Node" parent="SelectorComposite/SequenceComposite/AlwaysSucceedDecorator/attackPlayer/attack"]
+script = ExtResource("5_5ym66")
+
+[node name="follow" type="Node" parent="SelectorComposite/SequenceComposite/AlwaysSucceedDecorator/attackPlayer"]
+script = ExtResource("3_pleh7")
+
+[node name="ActionLeaf" type="Node" parent="SelectorComposite/SequenceComposite/AlwaysSucceedDecorator/attackPlayer/follow"]
+script = ExtResource("6_3306v")
+
+[node name="StartNavigation" type="Node" parent="SelectorComposite/SequenceComposite/AlwaysSucceedDecorator/attackPlayer/follow"]
+script = ExtResource("7_37pfm")
+
+[node name="TimeLimiterDecorator" type="Node" parent="SelectorComposite/SequenceComposite/AlwaysSucceedDecorator/attackPlayer/follow"]
+script = ExtResource("8_p6uql")
+wait_time = 0.05
+
+[node name="WaitForDestination" type="Node" parent="SelectorComposite/SequenceComposite/AlwaysSucceedDecorator/attackPlayer/follow/TimeLimiterDecorator"]
+script = ExtResource("9_omjuh")
+
+[node name="StopNavigation" type="Node" parent="SelectorComposite/SequenceComposite/AlwaysSucceedDecorator/attackPlayer/follow"]
+script = ExtResource("10_kx83c")
+
+[node name="ConditionLeaf" type="Node" parent="SelectorComposite/SequenceComposite/AlwaysSucceedDecorator/attackPlayer"]
+script = ExtResource("13_vyg5y")
+
+[node name="wander" type="Node" parent="SelectorComposite"]
+script = ExtResource("3_pleh7")
+
+[node name="NewWanderTarget" type="Node" parent="SelectorComposite/wander"]
+script = ExtResource("11_7e0kf")
+
+[node name="StartNavigation" type="Node" parent="SelectorComposite/wander"]
+script = ExtResource("7_37pfm")
+
+[node name="TimeLimiterDecorator" type="Node" parent="SelectorComposite/wander"]
+script = ExtResource("8_p6uql")
+wait_time = 3.0
+
+[node name="WaitForDestination" type="Node" parent="SelectorComposite/wander/TimeLimiterDecorator"]
+script = ExtResource("9_omjuh")
+
+[node name="StopNavigation" type="Node" parent="SelectorComposite/wander"]
+script = ExtResource("10_kx83c")

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Pants" load_steps=6 format=3 uid="uid://c8n0xtyf4056e"]
+
+[ext_resource type="Texture2D" uid="uid://c6lixthfmgjfb" path="res://textures/npc/character_parts/pants/red_pants/pelvis.PNG" id="1_el2ub"]
+[ext_resource type="Texture2D" uid="uid://gh6mw4yje07a" path="res://textures/icons/items/icon_pants_red.PNG" id="1_miit6"]
+[ext_resource type="Script" path="res://scripts/resources/pants_data.gd" id="1_yxwdu"]
+[ext_resource type="Texture2D" uid="uid://d3sis2fih63t0" path="res://textures/npc/character_parts/pants/red_pants/left_leg.PNG" id="2_nju03"]
+[ext_resource type="Texture2D" uid="uid://dmxne6sixrvju" path="res://textures/npc/character_parts/pants/red_pants/right_leg.PNG" id="3_1m1wu"]
+
+[resource]
+script = ExtResource("1_yxwdu")
+paper_doll_texture_leg_right = ExtResource("3_1m1wu")
+paper_doll_texture_leg_left = ExtResource("2_nju03")
+armor_type = "pants"
+armor_value = 5.0
+paper_doll_texture = ExtResource("1_el2ub")
+inv_texture = ExtResource("1_miit6")
+item_type = "Armor"
+item_name = "red_pants"
+item_description = "pants worn by the red faction"
+item_effect = "armor"

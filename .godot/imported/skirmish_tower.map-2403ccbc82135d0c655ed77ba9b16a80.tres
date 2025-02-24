@@ -1,0 +1,627 @@
+[gd_resource type="Resource" script_class="QuakeMapFile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/func_godot/src/import/quake_map_file.gd" id="1_gtg48"]
+
+[resource]
+script = ExtResource("1_gtg48")
+revision = 0
+map_data = "// Game: RadSkirm
+// Format: Standard
+// entity 0
+{
+\"classname\" \"worldspawn\"
+\"_tb_mod\" \"textures\"
+\"_tb_textures\" \"textures;textures/wall_textures\"
+// brush 0
+{
+( -400 320 192 ) ( -400 224 192 ) ( -400 224 16 ) wall_textures/green_brick_16x16 8.959991 -11.636362 0 1 1
+( -400 224 192 ) ( -384 224 192 ) ( -384 224 16 ) wall_textures/green_brick_16x16 8.959961 -11.636362 0 1 1
+( -384 224 16 ) ( -384 320 16 ) ( -400 320 16 ) wall_textures/green_brick_16x16 -30.080002 -8.959991 0 1 1
+( -400 320 192 ) ( -384 320 192 ) ( -384 224 192 ) wall_textures/green_brick_16x16 -30.080002 -8.959991 0 1 1
+( -384 320 16 ) ( -384 320 192 ) ( -400 320 192 ) wall_textures/green_brick_16x16 8.959961 -11.636362 0 1 1
+( -384 224 192 ) ( -384 320 192 ) ( -384 320 16 ) wall_textures/green_brick_16x16 8.959991 -11.636362 0 1 1
+}
+// brush 1
+{
+( -208 416 192 ) ( -208 400 192 ) ( -208 400 16 ) wall_textures/green_brick_16x16 -14.080017 -11.636362 0 1 1
+( -208 400 192 ) ( -128 320 192 ) ( -128 320 16 ) wall_textures/green_brick_16x16 -3.4196167 -11.636362 0 1 1
+( -128 320 192 ) ( -112 320 192 ) ( -112 320 16 ) wall_textures/green_brick_16x16 8.959991 -11.636362 0 1 1
+( -128 320 16 ) ( -112 320 16 ) ( -208 416 16 ) wall_textures/green_brick_16x16 -30.080002 -8.959991 0 1 1
+( -208 416 192 ) ( -112 320 192 ) ( -128 320 192 ) wall_textures/green_brick_16x16 -30.080002 -8.959991 0 1 1
+( -112 320 16 ) ( -112 320 192 ) ( -208 416 192 ) wall_textures/green_brick_16x16 -7.040039 -11.636362 0 1 1
+}
+// brush 2
+{
+( -400 224 192 ) ( -304 128 192 ) ( -304 128 16 ) wall_textures/green_brick_16x16 -7.0400085 -11.636362 0 1 1
+( -304 128 16 ) ( -304 144 16 ) ( -384 224 16 ) wall_textures/green_brick_16x16 -30.080002 -8.959991 0 1 1
+( -384 224 192 ) ( -304 144 192 ) ( -304 128 192 ) wall_textures/green_brick_16x16 -30.080002 -8.959991 0 1 1
+( -384 224 192 ) ( -400 224 192 ) ( -400 224 16 ) wall_textures/green_brick_16x16 8.959961 -11.636362 0 1 1
+( -384 224 192 ) ( -384 224 16 ) ( -304 144 16 ) wall_textures/green_brick_16x16 -10.6604 -11.636362 0 1 1
+( -304 128 192 ) ( -304 144 192 ) ( -304 144 16 ) wall_textures/green_brick_16x16 -14.080017 -11.636362 0 1 1
+}
+// brush 3
+{
+( -304 416 16 ) ( -304 416 192 ) ( -400 320 192 ) wall_textures/green_brick_16x16 -7.040039 -11.636362 0 1 1
+( -384 320 16 ) ( -400 320 16 ) ( -400 320 192 ) wall_textures/green_brick_16x16 8.959961 -11.636362 0 1 1
+( -304 400 16 ) ( -304 416 16 ) ( -400 320 16 ) wall_textures/green_brick_16x16 -30.080002 -8.959991 0 1 1
+( -400 320 192 ) ( -304 416 192 ) ( -304 400 192 ) wall_textures/green_brick_16x16 -30.080002 -8.959991 0 1 1
+( -384 320 192 ) ( -304 400 192 ) ( -304 400 16 ) wall_textures/green_brick_16x16 -3.4196167 -11.636362 0 1 1
+( -304 400 192 ) ( -304 416 192 ) ( -304 416 16 ) wall_textures/green_brick_16x16 -14.080017 -11.636362 0 1 1
+}
+// brush 4
+{
+( -208 144 192 ) ( -208 128 192 ) ( -208 128 16 ) wall_textures/green_brick_16x16 -14.079773 -11.636362 0 1 1
+( -128 224 16 ) ( -128 224 192 ) ( -208 144 192 ) wall_textures/green_brick_16x16 -10.6605835 -11.636362 0 1 1
+( -208 128 16 ) ( -112 224 16 ) ( -128 224 16 ) wall_textures/green_brick_16x16 1.9202194 -8.95977 0 1 1
+( -128 224 192 ) ( -112 224 192 ) ( -208 128 192 ) wall_textures/green_brick_16x16 1.9202194 -8.95977 0 1 1
+( -112 224 16 ) ( -112 224 192 ) ( -128 224 192 ) wall_textures/green_brick_16x16 8.959778 -11.636362 0 1 1
+( -208 128 192 ) ( -112 224 192 ) ( -112 224 16 ) wall_textures/green_brick_16x16 8.959789 -11.636362 0 1 1
+}
+// brush 5
+{
+( -304 416 192 ) ( -304 400 192 ) ( -304 400 16 ) wall_textures/green_brick_16x16 12.580376 -11.636362 0 1 1
+( -304 400 192 ) ( -208 400 192 ) ( -208 400 16 ) wall_textures/green_brick_16x16 -30.080002 -11.636362 0 1 1
+( -208 400 16 ) ( -208 416 16 ) ( -304 416 16 ) wall_textures/green_brick_16x16 -30.080002 -8.959991 0 1 1
+( -304 416 192 ) ( -208 416 192 ) ( -208 400 192 ) wall_textures/green_brick_16x16 -30.080002 -8.959991 0 1 1
+( -208 416 16 ) ( -208 416 192 ) ( -304 416 192 ) wall_textures/green_brick_16x16 -30.080002 -11.636362 0 1 1
+( -208 400 192 ) ( -208 416 192 ) ( -208 416 16 ) wall_textures/green_brick_16x16 12.580376 -11.636362 0 1 1
+}
+// brush 6
+{
+( -304 144 192 ) ( -304 128 192 ) ( -304 128 16 ) wall_textures/green_brick_16x16 5.3396072 -11.636362 0 1 1
+( -304 128 192 ) ( -208 128 192 ) ( -208 128 16 ) wall_textures/green_brick_16x16 -30.080002 -11.636362 0 1 1
+( -208 128 16 ) ( -208 144 16 ) ( -304 144 16 ) wall_textures/green_brick_16x16 -30.080002 -8.959991 0 1 1
+( -304 144 192 ) ( -208 144 192 ) ( -208 128 192 ) wall_textures/green_brick_16x16 -30.080002 -8.959991 0 1 1
+( -208 144 16 ) ( -208 144 192 ) ( -304 144 192 ) wall_textures/green_brick_16x16 -30.080002 -11.636362 0 1 1
+( -208 128 192 ) ( -208 144 192 ) ( -208 144 16 ) wall_textures/green_brick_16x16 -10.660381 -11.636362 0 1 1
+}
+// brush 7
+{
+( -352 320 192 ) ( -352 224 192 ) ( -352 224 176 ) wall_textures/woodfloor 8.959991 -11.636362 0 1 1
+( -352 224 192 ) ( -304 176 192 ) ( -304 176 176 ) wall_textures/woodfloor 5.3396072 -11.636362 0 1 1
+( -304 368 176 ) ( -304 368 192 ) ( -352 320 192 ) wall_textures/woodfloor -2.046997 -11.636362 0 1 1
+( -304 176 192 ) ( -208 176 192 ) ( -208 176 176 ) wall_textures/woodfloor -30.080002 -11.636362 0 1 1
+( -160 224 176 ) ( -160 320 176 ) ( -208 368 176 ) wall_textures/woodfloor -30.080002 -8.959991 0 1 1
+( -208 368 192 ) ( -160 320 192 ) ( -160 224 192 ) wall_textures/woodfloor -30.080002 -8.959991 0 1 1
+( -208 368 176 ) ( -208 368 192 ) ( -304 368 192 ) wall_textures/woodfloor -30.080002 -11.636362 0 1 1
+( -208 176 192 ) ( -160 224 192 ) ( -160 224 176 ) wall_textures/woodfloor -10.6604 -11.636362 0 1 1
+( -208 368 192 ) ( -208 368 176 ) ( -160 320 176 ) wall_textures/woodfloor -1.2011719 -11.636362 0 1 1
+( -160 224 192 ) ( -160 320 192 ) ( -160 320 176 ) wall_textures/woodfloor 8.959991 -11.636362 0 1 1
+}
+// brush 8
+{
+( -352 320 112 ) ( -352 224 112 ) ( -352 224 96 ) wall_textures/woodfloor 11.804977 10.181816 0 1 1
+( -352 224 112 ) ( -304 176 112 ) ( -304 176 96 ) wall_textures/woodfloor -2.6135864 10.181816 0 1 1
+( -304 368 96 ) ( -304 368 112 ) ( -352 320 112 ) wall_textures/woodfloor -0.574646 10.181816 0 1 1
+( -304 176 112 ) ( -208 176 112 ) ( -208 176 96 ) wall_textures/woodfloor -0.8128662 10.181816 0 1 1
+( -160 224 96 ) ( -160 320 96 ) ( -208 368 96 ) wall_textures/woodfloor -0.8128662 -11.804977 0 1 1
+( -208 368 112 ) ( -160 320 112 ) ( -160 224 112 ) wall_textures/woodfloor -0.8128662 -11.804977 0 1 1
+( -208 368 96 ) ( -208 368 112 ) ( -304 368 112 ) wall_textures/woodfloor -0.8128662 10.181816 0 1 1
+( -208 176 112 ) ( -160 224 112 ) ( -160 224 96 ) wall_textures/woodfloor -7.815399 10.181816 0 1 1
+( -160 320 96 ) ( -160 320 112 ) ( -208 368 112 ) wall_textures/woodfloor -11.354309 10.181816 0 1 1
+( -160 224 112 ) ( -160 320 112 ) ( -160 320 96 ) wall_textures/woodfloor 11.804977 10.181816 0 1 1
+}
+// brush 9
+{
+( -128 320 192 ) ( -128 304 192 ) ( -128 304 16 ) wall_textures/green_brick_2_16x16 8.959991 -11.636362 0 1 1
+( -128 304 192 ) ( -112 304 192 ) ( -112 304 16 ) wall_textures/green_brick_2_16x16 0 -4 0 1 1
+( -112 304 16 ) ( -112 320 16 ) ( -128 320 16 ) wall_textures/green_brick_2_16x16 0 -8 0 1 1
+( -128 320 192 ) ( -112 320 192 ) ( -112 304 192 ) wall_textures/green_brick_2_16x16 -30.080002 -8.959991 0 1 1
+( -112 320 16 ) ( -112 320 192 ) ( -128 320 192 ) wall_textures/green_brick_2_16x16 8.959991 -11.636362 0 1 1
+( -112 304 192 ) ( -112 320 192 ) ( -112 320 16 ) wall_textures/green_brick_2_16x16 8.959991 -11.636362 0 1 1
+}
+// brush 10
+{
+( -128 240 192 ) ( -128 224 192 ) ( -128 224 16 ) wall_textures/green_brick_2_16x16 8.959991 -11.636362 0 1 1
+( -128 224 192 ) ( -112 224 192 ) ( -112 224 16 ) wall_textures/green_brick_2_16x16 8.960022 -11.636362 0 1 1
+( -112 224 16 ) ( -112 240 16 ) ( -128 240 16 ) wall_textures/green_brick_2_16x16 0 -8 0 1 1
+( -128 240 192 ) ( -112 240 192 ) ( -112 224 192 ) wall_textures/green_brick_2_16x16 -30.080002 -8.959991 0 1 1
+( -112 240 16 ) ( -112 240 192 ) ( -128 240 192 ) wall_textures/green_brick_2_16x16 0 -4 0 1 1
+( -112 224 192 ) ( -112 240 192 ) ( -112 240 16 ) wall_textures/green_brick_2_16x16 8.959991 -11.636362 0 1 1
+}
+// brush 11
+{
+( -128 304 192 ) ( -128 240 192 ) ( -128 240 96 ) wall_textures/green_brick_16x16 8.959991 -11.636362 0 1 1
+( -128 240 192 ) ( -112 240 192 ) ( -112 240 96 ) wall_textures/green_brick_16x16 0 -4 0 1 1
+( -112 240 96 ) ( -112 304 64 ) ( -128 304 64 ) wall_textures/green_brick_16x16 0 -8 0 1 1
+( -128 304 192 ) ( -112 304 192 ) ( -112 240 192 ) wall_textures/green_brick_16x16 -30.080002 -8.959991 0 1 1
+( -112 304 64 ) ( -112 304 192 ) ( -128 304 192 ) wall_textures/green_brick_16x16 0 -4 0 1 1
+( -112 240 192 ) ( -112 304 192 ) ( -112 304 64 ) wall_textures/green_brick_16x16 8.959991 -11.636362 0 1 1
+}
+// brush 12
+{
+( -128 240 96 ) ( -128 240 64 ) ( -128 272 80 ) wall_textures/green_brick_16x16 8.959991 -11.636362 0 1 1
+( -128 240 96 ) ( -112 240 96 ) ( -112 240 64 ) wall_textures/green_brick_16x16 0 -4 0 1 1
+( -112 240 64 ) ( -112 272 80 ) ( -128 272 80 ) wall_textures/green_brick_16x16 0 -8 0 1 1
+( -112 240 96 ) ( -128 240 96 ) ( -128 272 80 ) wall_textures/green_brick_16x16 0 -8 0 1 1
+( -112 240 96 ) ( -112 272 80 ) ( -112 240 64 ) wall_textures/green_brick_16x16 8.959991 -11.636362 0 1 1
+}
+// brush 13
+{
+( 480 480 112 ) ( 480 -480 112 ) ( 480 -480 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( 480 -480 112 ) ( 496 -480 112 ) ( 496 -480 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( 496 -480 16 ) ( 496 480 16 ) ( 480 480 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( 480 480 112 ) ( 496 480 112 ) ( 496 -480 112 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( 496 480 16 ) ( 496 480 112 ) ( 480 480 112 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( 496 -480 112 ) ( 496 480 112 ) ( 496 480 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+}
+// brush 14
+{
+( -496 496 112 ) ( -496 480 112 ) ( -496 480 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( -496 480 112 ) ( 496 480 112 ) ( 496 480 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( 496 480 16 ) ( 496 496 16 ) ( -496 496 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( -496 496 112 ) ( 496 496 112 ) ( 496 480 112 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( 496 496 16 ) ( 496 496 112 ) ( -496 496 112 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( 496 480 112 ) ( 496 496 112 ) ( 496 496 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+}
+// brush 15
+{
+( -496 480 112 ) ( -496 -480 112 ) ( -496 -480 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( -496 -480 112 ) ( -480 -480 112 ) ( -480 -480 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( -480 -480 16 ) ( -480 480 16 ) ( -496 480 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( -496 480 112 ) ( -480 480 112 ) ( -480 -480 112 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( -480 480 16 ) ( -480 480 112 ) ( -496 480 112 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( -480 -480 112 ) ( -480 480 112 ) ( -480 480 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+}
+// brush 16
+{
+( -496 -480 112 ) ( -496 -496 112 ) ( -496 -496 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( -496 -496 112 ) ( 496 -496 112 ) ( 496 -496 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( 496 -496 16 ) ( 496 -480 16 ) ( -496 -480 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( -496 -480 112 ) ( 496 -480 112 ) ( 496 -496 112 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( 496 -480 16 ) ( 496 -480 112 ) ( -496 -480 112 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+( 496 -496 112 ) ( 496 -480 112 ) ( 496 -480 16 ) wall_textures/red_bricks_16x16 0 0 0 1 1
+}
+// brush 17
+{
+( -384 320 48 ) ( -384 224 32 ) ( -384 224 16 ) wall_textures/woodfloor 0 0 0 1 1
+( -384 224 32 ) ( -352 224 32 ) ( -352 224 16 ) wall_textures/woodfloor 0 0 0 1 1
+( -384 320 48 ) ( -352 320 48 ) ( -352 224 32 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 224 16 ) ( -352 320 32 ) ( -384 320 32 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 320 32 ) ( -352 320 48 ) ( -384 320 48 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 224 32 ) ( -352 320 48 ) ( -352 320 32 ) wall_textures/woodfloor 0 0 0 1 1
+}
+// brush 18
+{
+( -304 400 48 ) ( -304 400 64 ) ( -384 320 48 ) wall_textures/woodfloor 0 0 0 1 1
+( -384 320 48 ) ( -304 400 64 ) ( -304 368 64 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 320 32 ) ( -384 320 32 ) ( -384 320 48 ) wall_textures/woodfloor 16 0 0 1 1
+( -384 320 48 ) ( -304 368 64 ) ( -352 320 48 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 320 32 ) ( -304 400 48 ) ( -384 320 32 ) wall_textures/woodfloor 0 0 0 1 1
+( -304 368 48 ) ( -304 400 48 ) ( -352 320 32 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 320 48 ) ( -304 368 64 ) ( -304 368 48 ) wall_textures/woodfloor 0 0 0 1 1
+( -304 368 64 ) ( -304 400 64 ) ( -304 400 48 ) wall_textures/woodfloor 16 0 0 1 1
+}
+// brush 19
+{
+( -304 400 64 ) ( -304 368 64 ) ( -304 368 48 ) wall_textures/woodfloor 0 0 0 1 1
+( -304 400 64 ) ( -208 400 80 ) ( -208 368 80 ) wall_textures/woodfloor 0 0 0 1 1
+( -304 368 64 ) ( -208 368 80 ) ( -208 368 64 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 400 64 ) ( -208 400 80 ) ( -304 400 64 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 368 64 ) ( -208 400 64 ) ( -304 400 48 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 368 80 ) ( -208 400 80 ) ( -208 400 64 ) wall_textures/woodfloor 0 0 0 1 1
+}
+// brush 20
+{
+( -208 400 80 ) ( -208 368 80 ) ( -208 368 64 ) wall_textures/woodfloor 16 0 0 1 1
+( -208 368 80 ) ( -160 320 96 ) ( -160 320 80 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 400 80 ) ( -160 320 96 ) ( -208 368 80 ) wall_textures/woodfloor 0 0 0 1 1
+( -160 320 96 ) ( -128 320 96 ) ( -128 320 80 ) wall_textures/woodfloor 16 0 0 1 1
+( -160 320 80 ) ( -128 320 80 ) ( -208 368 64 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 400 80 ) ( -128 320 96 ) ( -160 320 96 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 368 64 ) ( -128 320 80 ) ( -208 400 64 ) wall_textures/woodfloor 0 0 0 1 1
+( -128 320 80 ) ( -128 320 96 ) ( -208 400 80 ) wall_textures/woodfloor 0 0 0 1 1
+}
+// brush 21
+{
+( -160 320 96 ) ( -160 224 112 ) ( -160 224 96 ) wall_textures/woodfloor 0 0 0 1 1
+( -160 224 112 ) ( -128 224 112 ) ( -128 224 96 ) wall_textures/woodfloor 0 0 0 1 1
+( -128 224 96 ) ( -128 320 80 ) ( -160 320 80 ) wall_textures/woodfloor 0 0 0 1 1
+( -160 320 96 ) ( -128 320 96 ) ( -128 224 112 ) wall_textures/woodfloor 0 0 0 1 1
+( -128 320 80 ) ( -128 320 96 ) ( -160 320 96 ) wall_textures/woodfloor 0 0 0 1 1
+( -128 224 112 ) ( -128 320 96 ) ( -128 320 80 ) wall_textures/woodfloor 0 0 0 1 1
+}
+// brush 22
+{
+( -208 176 128 ) ( -208 144 128 ) ( -208 144 112 ) wall_textures/woodfloor 16 0 0 1 1
+( -160 224 96 ) ( -160 224 112 ) ( -208 176 128 ) wall_textures/woodfloor 1 0 0 1 1
+( -208 144 112 ) ( -160 224 96 ) ( -208 176 112 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 144 112 ) ( -128 224 96 ) ( -160 224 96 ) wall_textures/woodfloor 0 0 0 1 1
+( -160 224 112 ) ( -128 224 112 ) ( -208 176 128 ) wall_textures/woodfloor 0 0 0 1 1
+( -128 224 96 ) ( -128 224 112 ) ( -160 224 112 ) wall_textures/woodfloor 16 0 0 1 1
+( -208 176 128 ) ( -128 224 112 ) ( -208 144 128 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 144 128 ) ( -128 224 112 ) ( -128 224 96 ) wall_textures/woodfloor 1 0 0 1 1
+}
+// brush 23
+{
+( -304 176 144 ) ( -304 144 144 ) ( -304 144 128 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 144 112 ) ( -208 176 112 ) ( -304 176 128 ) wall_textures/woodfloor 0 0 0 1 1
+( -304 144 144 ) ( -208 144 128 ) ( -208 144 112 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 176 112 ) ( -208 176 128 ) ( -304 176 144 ) wall_textures/woodfloor 0 0 0 1 1
+( -304 176 144 ) ( -208 176 128 ) ( -208 144 128 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 144 128 ) ( -208 176 128 ) ( -208 176 112 ) wall_textures/woodfloor 0 0 0 1 1
+}
+// brush 24
+{
+( -384 224 160 ) ( -304 144 144 ) ( -304 144 128 ) wall_textures/woodfloor 0 0 0 1 1
+( -304 144 128 ) ( -304 176 128 ) ( -384 224 144 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 224 160 ) ( -304 144 144 ) ( -384 224 160 ) wall_textures/woodfloor 0 0 0 1 1
+( -384 224 144 ) ( -304 176 128 ) ( -352 224 144 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 224 160 ) ( -384 224 160 ) ( -384 224 144 ) wall_textures/woodfloor 16 0 0 1 1
+( -352 224 160 ) ( -304 176 144 ) ( -304 144 144 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 224 160 ) ( -352 224 144 ) ( -304 176 128 ) wall_textures/woodfloor 0 0 0 1 1
+( -304 144 144 ) ( -304 176 144 ) ( -304 176 128 ) wall_textures/woodfloor 16 0 0 1 1
+}
+// brush 25
+{
+( -384 320 176 ) ( -384 224 160 ) ( -384 224 144 ) wall_textures/woodfloor 0 0 0 1 1
+( -384 224 160 ) ( -352 224 160 ) ( -352 224 144 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 224 160 ) ( -384 224 160 ) ( -384 320 176 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 224 144 ) ( -352 320 160 ) ( -384 320 160 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 320 160 ) ( -352 320 176 ) ( -384 320 176 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 224 160 ) ( -352 320 176 ) ( -352 320 160 ) wall_textures/woodfloor 0 0 0 1 1
+}
+// brush 26
+{
+( -304 400 176 ) ( -304 400 192 ) ( -384 320 176 ) wall_textures/woodfloor 0 0 0 1 1
+( -384 320 176 ) ( -304 400 192 ) ( -304 368 192 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 320 160 ) ( -384 320 160 ) ( -384 320 176 ) wall_textures/woodfloor 16 0 0 1 1
+( -384 320 176 ) ( -304 368 192 ) ( -352 320 176 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 320 160 ) ( -304 400 176 ) ( -384 320 160 ) wall_textures/woodfloor 0 0 0 1 1
+( -304 368 176 ) ( -304 400 176 ) ( -352 320 160 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 320 176 ) ( -304 368 192 ) ( -304 368 176 ) wall_textures/woodfloor 0 0 0 1 1
+( -304 368 192 ) ( -304 400 192 ) ( -304 400 176 ) wall_textures/woodfloor 16 0 0 1 1
+}
+// brush 27
+{
+( -208 176 192 ) ( -208 144 192 ) ( -208 144 176 ) wall_textures/woodfloor 16 0 0 1 1
+( -160 224 176 ) ( -160 224 192 ) ( -208 176 192 ) wall_textures/woodfloor 1 0 0 1 1
+( -208 144 176 ) ( -128 224 176 ) ( -160 224 176 ) wall_textures/woodfloor 0 0 0 1 1
+( -160 224 192 ) ( -128 224 192 ) ( -208 144 192 ) wall_textures/woodfloor 0 0 0 1 1
+( -128 224 176 ) ( -128 224 192 ) ( -160 224 192 ) wall_textures/woodfloor 16 0 0 1 1
+( -208 144 192 ) ( -128 224 192 ) ( -128 224 176 ) wall_textures/woodfloor 1 0 0 1 1
+}
+// brush 28
+{
+( -160 320 192 ) ( -160 224 192 ) ( -160 224 176 ) wall_textures/woodfloor 0 0 0 1 1
+( -160 224 192 ) ( -128 224 192 ) ( -128 224 176 ) wall_textures/woodfloor 0 0 0 1 1
+( -128 224 176 ) ( -128 320 176 ) ( -160 320 176 ) wall_textures/woodfloor 0 0 0 1 1
+( -160 320 192 ) ( -128 320 192 ) ( -128 224 192 ) wall_textures/woodfloor 0 0 0 1 1
+( -128 320 176 ) ( -128 320 192 ) ( -160 320 192 ) wall_textures/woodfloor 0 0 0 1 1
+( -128 224 192 ) ( -128 320 192 ) ( -128 320 176 ) wall_textures/woodfloor 0 0 0 1 1
+}
+// brush 29
+{
+( -208 400 192 ) ( -208 368 192 ) ( -208 368 176 ) wall_textures/woodfloor 16 0 0 1 1
+( -208 368 192 ) ( -160 320 192 ) ( -160 320 176 ) wall_textures/woodfloor 0 0 0 1 1
+( -160 320 192 ) ( -128 320 192 ) ( -128 320 176 ) wall_textures/woodfloor 16 0 0 1 1
+( -160 320 176 ) ( -128 320 176 ) ( -208 400 176 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 400 192 ) ( -128 320 192 ) ( -160 320 192 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 400 192 ) ( -208 400 176 ) ( -128 320 176 ) wall_textures/woodfloor 0 0 0 1 1
+}
+// brush 30
+{
+( -304 400 192 ) ( -304 368 192 ) ( -304 368 176 ) wall_textures/woodfloor 0 0 0 1 1
+( -304 368 192 ) ( -208 368 192 ) ( -208 368 176 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 368 176 ) ( -208 400 176 ) ( -304 400 176 ) wall_textures/woodfloor 0 0 0 1 1
+( -304 400 192 ) ( -208 400 192 ) ( -208 368 192 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 400 176 ) ( -208 400 192 ) ( -304 400 192 ) wall_textures/woodfloor 0 0 0 1 1
+( -208 368 192 ) ( -208 400 192 ) ( -208 400 176 ) wall_textures/woodfloor 0 0 0 1 1
+}
+// brush 31
+{
+( -496 -496 -16 ) ( -496 496 -16 ) ( -496 -496 16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( -496 -496 16 ) ( -384 -496 16 ) ( -496 -496 -16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( -496 -496 -16 ) ( -384 -496 -16 ) ( -496 496 -16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( -496 496 16 ) ( -384 496 16 ) ( -496 -496 16 ) wall_textures/green_grass_32x32 -30.080002 -8.959991 0 1 1
+( -496 496 -16 ) ( -384 496 -16 ) ( -496 496 16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( -384 -496 -16 ) ( -384 -496 16 ) ( -384 496 -16 ) wall_textures/green_grass_32x32 8.959991 -11.636362 0 1 1
+}
+// brush 32
+{
+( -384 496 16 ) ( -384 320 16 ) ( -384 496 -16 ) wall_textures/green_grass_32x32 8.959991 -11.636362 0 1 1
+( -384 496 -16 ) ( -384 320 -16 ) ( -304 496 -16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( -304 496 16 ) ( -256 448 16 ) ( -384 496 16 ) wall_textures/green_grass_32x32 -30.080002 -8.959991 0 1 1
+( -384 496 -16 ) ( -304 496 -16 ) ( -384 496 16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( -256 448 16 ) ( -256 448 -16 ) ( -384 320 16 ) wall_textures/green_grass_32x32 -2.046997 -11.636362 0 1 1
+( -304 496 -16 ) ( -256 448 -16 ) ( -304 496 16 ) wall_textures/green_grass_32x32 -1.2011719 -11.636362 0 1 1
+}
+// brush 33
+{
+( -256 448 16 ) ( -304 400 16 ) ( -256 448 -16 ) wall_textures/green_grass_32x32 -2.046997 -11.636362 0 1 1
+( -208 400 -16 ) ( -304 400 -16 ) ( -208 400 16 ) wall_textures/green_grass_32x32 -30.080002 -11.636362 0 1 1
+( -256 448 -16 ) ( -304 400 -16 ) ( -208 400 -16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( -256 448 16 ) ( -208 400 16 ) ( -304 400 16 ) wall_textures/green_grass_32x32 -30.080002 -8.959991 0 1 1
+( -256 448 -16 ) ( -208 400 -16 ) ( -256 448 16 ) wall_textures/green_grass_32x32 -1.2011719 -11.636362 0 1 1
+}
+// brush 34
+{
+( -384 224 32 ) ( -304 144 16 ) ( -384 224 16 ) wall_textures/woodfloor 5.3396072 -11.636362 0 1 1
+( -384 224 32 ) ( -352 224 32 ) ( -304 144 16 ) wall_textures/woodfloor 0 0 0 1 1
+( -304 176 16 ) ( -352 224 16 ) ( -304 144 16 ) wall_textures/woodfloor -30.080002 -8.959991 0 1 1
+( -384 224 16 ) ( -352 224 16 ) ( -384 224 32 ) wall_textures/woodfloor 16 0 0 1 1
+( -352 224 32 ) ( -304 176 16 ) ( -304 144 16 ) wall_textures/woodfloor 0 0 0 1 1
+( -352 224 32 ) ( -352 224 16 ) ( -304 176 16 ) wall_textures/woodfloor 0 0 0 1 1
+}
+// brush 35
+{
+( -128 496 16 ) ( -128 -496 16 ) ( -128 496 -16 ) wall_textures/green_grass_32x32 8.959991 -11.636362 0 1 1
+( 496 -496 -16 ) ( -128 -496 -16 ) ( 496 -496 16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( 496 496 -16 ) ( -128 496 -16 ) ( 496 -496 -16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( 496 -496 16 ) ( -128 -496 16 ) ( 496 496 16 ) wall_textures/green_grass_32x32 -30.080002 -8.959991 0 1 1
+( 496 496 16 ) ( -128 496 16 ) ( 496 496 -16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( 496 -496 16 ) ( 496 496 16 ) ( 496 -496 -16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+}
+// brush 36
+{
+( -128 496 0 ) ( -128 -496 0 ) ( -128 496 -32 ) wall_textures/green_grass_32x32 8.959991 -11.636362 0 1 1
+( 496 -496 -32 ) ( -128 -496 -32 ) ( 496 -496 0 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( 496 496 -32 ) ( -128 496 -32 ) ( 496 -496 -32 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( 496 -496 0 ) ( -128 -496 0 ) ( 496 496 0 ) wall_textures/green_grass_32x32 -30.080002 -8.959991 0 1 1
+( 496 496 0 ) ( -128 496 0 ) ( 496 496 -32 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( 496 -496 0 ) ( 496 496 0 ) ( 496 -496 -32 ) wall_textures/green_grass_32x32 0 0 0 1 1
+}
+// brush 37
+{
+( -128 -32 -16 ) ( -256 96 -16 ) ( -128 -32 16 ) wall_textures/green_grass_32x32 5.3396072 -11.636362 0 1 1
+( -256 96 -16 ) ( -128 224 -16 ) ( -256 96 16 ) wall_textures/green_grass_32x32 -10.6604 -11.636362 0 1 1
+( -128 -32 -16 ) ( -128 224 -16 ) ( -256 96 -16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( -128 -32 16 ) ( -256 96 16 ) ( -128 224 16 ) wall_textures/green_grass_32x32 -30.080002 -8.959991 0 1 1
+( -128 -32 16 ) ( -128 224 16 ) ( -128 -32 -16 ) wall_textures/green_grass_32x32 8.959991 -11.636362 0 1 1
+}
+// brush 38
+{
+( -384 -496 -16 ) ( -384 224 -16 ) ( -384 -496 16 ) wall_textures/green_grass_32x32 8.959991 -11.636362 0 1 1
+( -128 -496 -16 ) ( -384 -496 -16 ) ( -128 -496 16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( -128 -496 -16 ) ( -128 -32 -16 ) ( -384 -496 -16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( -384 -496 16 ) ( -384 224 16 ) ( -128 -496 16 ) wall_textures/green_grass_32x32 -30.080002 -8.959991 0 1 1
+( -384 224 -16 ) ( -128 -32 -16 ) ( -384 224 16 ) wall_textures/green_grass_32x32 5.3396072 -11.636362 0 1 1
+( -128 -496 16 ) ( -128 -32 16 ) ( -128 -496 -16 ) wall_textures/green_grass_32x32 8.959991 -11.636362 0 1 1
+}
+// brush 39
+{
+( -256 96 -16 ) ( -304 144 -16 ) ( -256 96 16 ) wall_textures/green_grass_32x32 5.3396072 -11.636362 0 1 1
+( -256 96 -16 ) ( -208 144 -16 ) ( -304 144 -16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( -256 96 16 ) ( -304 144 16 ) ( -208 144 16 ) wall_textures/green_grass_32x32 -30.080002 -8.959991 0 1 1
+( -304 144 -16 ) ( -208 144 -16 ) ( -304 144 16 ) wall_textures/green_grass_32x32 -30.080002 -11.636362 0 1 1
+( -256 96 16 ) ( -208 144 16 ) ( -256 96 -16 ) wall_textures/green_grass_32x32 -10.6604 -11.636362 0 1 1
+}
+// brush 40
+{
+( -128 320 16 ) ( -128 320 -16 ) ( -304 496 16 ) wall_textures/green_grass_32x32 -1.2011719 -11.636362 0 1 1
+( -128 496 -16 ) ( -304 496 -16 ) ( -128 320 -16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( -128 496 16 ) ( -128 320 16 ) ( -304 496 16 ) wall_textures/green_grass_32x32 -30.080002 -8.959991 0 1 1
+( -128 496 16 ) ( -304 496 16 ) ( -128 496 -16 ) wall_textures/green_grass_32x32 0 0 0 1 1
+( -128 496 -16 ) ( -128 320 -16 ) ( -128 496 16 ) wall_textures/green_grass_32x32 8.959991 -11.636362 0 1 1
+}
+// brush 41
+{
+( -384 320 0 ) ( -384 320 16 ) ( -384 224 0 ) wall_textures/woodfloor 8.959991 -11.636362 0 1 1
+( -384 224 0 ) ( -384 224 16 ) ( -304 144 0 ) wall_textures/woodfloor 5.3396072 -11.636362 0 1 1
+( -304 400 0 ) ( -304 400 16 ) ( -384 320 0 ) wall_textures/woodfloor -2.046997 -11.636362 0 1 1
+( -304 144 0 ) ( -304 144 16 ) ( -208 144 0 ) wall_textures/woodfloor -30.080002 -11.636362 0 1 1
+( -384 224 0 ) ( -304 144 0 ) ( -384 320 0 ) wall_textures/woodfloor 0 0 0 1 1
+( -128 224 16 ) ( -208 144 16 ) ( -128 320 16 ) wall_textures/woodfloor -30.080002 -8.959991 0 1 1
+( -208 400 0 ) ( -208 400 16 ) ( -304 400 0 ) wall_textures/woodfloor -30.080002 -11.636362 0 1 1
+( -208 144 0 ) ( -208 144 16 ) ( -128 224 0 ) wall_textures/woodfloor -10.6604 -11.636362 0 1 1
+( -128 320 0 ) ( -128 320 16 ) ( -208 400 0 ) wall_textures/woodfloor -1.2011719 -11.636362 0 1 1
+( -128 224 0 ) ( -128 224 16 ) ( -128 320 0 ) wall_textures/woodfloor 8.959991 -11.636362 0 1 1
+}
+// brush 42
+{
+( 256 -208 96 ) ( 256 -224 96 ) ( 256 -224 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 256 -224 96 ) ( 272 -224 96 ) ( 272 -224 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 272 -224 16 ) ( 272 -208 16 ) ( 256 -208 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 256 -208 96 ) ( 272 -208 96 ) ( 272 -224 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 272 -208 16 ) ( 272 -208 96 ) ( 256 -208 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 272 -224 96 ) ( 272 -208 96 ) ( 272 -208 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 43
+{
+( 256 -256 96 ) ( 256 -272 96 ) ( 256 -272 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 256 -272 96 ) ( 272 -272 96 ) ( 272 -272 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 272 -272 16 ) ( 272 -256 16 ) ( 256 -256 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 256 -256 96 ) ( 272 -256 96 ) ( 272 -272 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 272 -256 16 ) ( 272 -256 96 ) ( 256 -256 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 272 -272 96 ) ( 272 -256 96 ) ( 272 -256 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 44
+{
+( 256 -352 96 ) ( 256 -368 96 ) ( 256 -368 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 256 -368 96 ) ( 272 -368 96 ) ( 272 -368 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 272 -368 16 ) ( 272 -352 16 ) ( 256 -352 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 256 -352 96 ) ( 272 -352 96 ) ( 272 -368 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 272 -352 16 ) ( 272 -352 96 ) ( 256 -352 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 272 -368 96 ) ( 272 -352 96 ) ( 272 -352 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 45
+{
+( 208 -208 96 ) ( 208 -224 96 ) ( 208 -224 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 208 -224 96 ) ( 224 -224 96 ) ( 224 -224 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 224 -224 16 ) ( 224 -208 16 ) ( 208 -208 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 208 -208 96 ) ( 224 -208 96 ) ( 224 -224 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 224 -208 16 ) ( 224 -208 96 ) ( 208 -208 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 224 -224 96 ) ( 224 -208 96 ) ( 224 -208 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 46
+{
+( 208 -256 96 ) ( 208 -272 96 ) ( 208 -272 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 208 -272 96 ) ( 224 -272 96 ) ( 224 -272 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 224 -272 16 ) ( 224 -256 16 ) ( 208 -256 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 208 -256 96 ) ( 224 -256 96 ) ( 224 -272 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 224 -256 16 ) ( 224 -256 96 ) ( 208 -256 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 224 -272 96 ) ( 224 -256 96 ) ( 224 -256 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 47
+{
+( 208 -352 96 ) ( 208 -368 96 ) ( 208 -368 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 208 -368 96 ) ( 224 -368 96 ) ( 224 -368 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 224 -368 16 ) ( 224 -352 16 ) ( 208 -352 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 208 -352 96 ) ( 224 -352 96 ) ( 224 -368 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 224 -352 16 ) ( 224 -352 96 ) ( 208 -352 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 224 -368 96 ) ( 224 -352 96 ) ( 224 -352 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 48
+{
+( 304 -352 96 ) ( 304 -368 96 ) ( 304 -368 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 304 -368 96 ) ( 320 -368 96 ) ( 320 -368 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 320 -368 16 ) ( 320 -352 16 ) ( 304 -352 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 304 -352 96 ) ( 320 -352 96 ) ( 320 -368 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 320 -352 16 ) ( 320 -352 96 ) ( 304 -352 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 320 -368 96 ) ( 320 -352 96 ) ( 320 -352 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 49
+{
+( 352 -304 80 ) ( 352 -320 80 ) ( 352 -320 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 352 -320 80 ) ( 368 -320 80 ) ( 368 -320 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 368 -320 16 ) ( 368 -304 16 ) ( 352 -304 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 352 -304 80 ) ( 368 -304 80 ) ( 368 -320 80 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 368 -304 16 ) ( 368 -304 80 ) ( 352 -304 80 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 368 -320 80 ) ( 368 -304 80 ) ( 368 -304 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 50
+{
+( 352 -208 48 ) ( 352 -224 48 ) ( 352 -224 16 ) wall_textures/green_beams_16x16 8 8 0 1 1
+( 352 -224 48 ) ( 368 -224 48 ) ( 368 -224 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 368 -224 16 ) ( 368 -208 16 ) ( 352 -208 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 352 -208 48 ) ( 368 -208 48 ) ( 368 -224 48 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 368 -208 16 ) ( 368 -208 48 ) ( 352 -208 48 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 368 -224 48 ) ( 368 -208 48 ) ( 368 -208 16 ) wall_textures/green_beams_16x16 8 8 0 1 1
+}
+// brush 51
+{
+( 400 -304 64 ) ( 400 -320 64 ) ( 400 -320 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 400 -320 64 ) ( 416 -320 64 ) ( 416 -320 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 416 -320 16 ) ( 416 -304 16 ) ( 400 -304 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 400 -304 64 ) ( 416 -304 64 ) ( 416 -320 64 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 416 -304 16 ) ( 416 -304 64 ) ( 400 -304 64 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 416 -320 64 ) ( 416 -304 64 ) ( 416 -304 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 52
+{
+( 352 -256 64 ) ( 352 -272 64 ) ( 352 -272 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 352 -272 64 ) ( 368 -272 64 ) ( 368 -272 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 368 -272 16 ) ( 368 -256 16 ) ( 352 -256 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 352 -256 64 ) ( 368 -256 64 ) ( 368 -272 64 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 368 -256 16 ) ( 368 -256 64 ) ( 352 -256 64 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 368 -272 64 ) ( 368 -256 64 ) ( 368 -256 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 53
+{
+( 304 -208 32 ) ( 304 -224 32 ) ( 304 -224 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 304 -224 32 ) ( 320 -224 32 ) ( 320 -224 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 320 -224 16 ) ( 320 -208 16 ) ( 304 -208 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 304 -208 32 ) ( 320 -208 32 ) ( 320 -224 32 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 320 -208 16 ) ( 320 -208 32 ) ( 304 -208 32 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 320 -224 32 ) ( 320 -208 32 ) ( 320 -208 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 54
+{
+( 400 -256 96 ) ( 400 -272 96 ) ( 400 -272 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 400 -272 96 ) ( 416 -272 96 ) ( 416 -272 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 416 -272 16 ) ( 416 -256 16 ) ( 400 -256 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 400 -256 96 ) ( 416 -256 96 ) ( 416 -272 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 416 -256 16 ) ( 416 -256 96 ) ( 400 -256 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 416 -272 96 ) ( 416 -256 96 ) ( 416 -256 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 55
+{
+( 400 -208 96 ) ( 400 -224 96 ) ( 400 -224 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 400 -224 96 ) ( 416 -224 96 ) ( 416 -224 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 416 -224 16 ) ( 416 -208 16 ) ( 400 -208 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 400 -208 96 ) ( 416 -208 96 ) ( 416 -224 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 416 -208 16 ) ( 416 -208 96 ) ( 400 -208 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 416 -224 96 ) ( 416 -208 96 ) ( 416 -208 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 56
+{
+( 304 -304 96 ) ( 304 -320 96 ) ( 304 -320 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 304 -320 96 ) ( 320 -320 96 ) ( 320 -320 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 320 -320 16 ) ( 320 -304 16 ) ( 304 -304 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 304 -304 96 ) ( 320 -304 96 ) ( 320 -320 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 320 -304 16 ) ( 320 -304 96 ) ( 304 -304 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 320 -320 96 ) ( 320 -304 96 ) ( 320 -304 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 57
+{
+( 256 -304 96 ) ( 256 -320 96 ) ( 256 -320 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 256 -320 96 ) ( 272 -320 96 ) ( 272 -320 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 272 -320 16 ) ( 272 -304 16 ) ( 256 -304 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 256 -304 96 ) ( 272 -304 96 ) ( 272 -320 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 272 -304 16 ) ( 272 -304 96 ) ( 256 -304 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 272 -320 96 ) ( 272 -304 96 ) ( 272 -304 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 58
+{
+( 208 -304 96 ) ( 208 -320 96 ) ( 208 -320 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 208 -320 96 ) ( 224 -320 96 ) ( 224 -320 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 224 -320 16 ) ( 224 -304 16 ) ( 208 -304 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 208 -304 96 ) ( 224 -304 96 ) ( 224 -320 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 224 -304 16 ) ( 224 -304 96 ) ( 208 -304 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 224 -320 96 ) ( 224 -304 96 ) ( 224 -304 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 59
+{
+( 400 -352 96 ) ( 400 -368 96 ) ( 400 -368 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 400 -368 96 ) ( 416 -368 96 ) ( 416 -368 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 416 -368 16 ) ( 416 -352 16 ) ( 400 -352 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 400 -352 96 ) ( 416 -352 96 ) ( 416 -368 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 416 -352 16 ) ( 416 -352 96 ) ( 400 -352 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 416 -368 96 ) ( 416 -352 96 ) ( 416 -352 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 60
+{
+( 352 -352 96 ) ( 352 -368 96 ) ( 352 -368 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 352 -368 96 ) ( 368 -368 96 ) ( 368 -368 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 368 -368 16 ) ( 368 -352 16 ) ( 352 -352 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 352 -352 96 ) ( 368 -352 96 ) ( 368 -368 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 368 -352 16 ) ( 368 -352 96 ) ( 352 -352 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 368 -368 96 ) ( 368 -352 96 ) ( 368 -352 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 61
+{
+( 400 -160 96 ) ( 400 -176 96 ) ( 400 -176 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 400 -176 96 ) ( 416 -176 96 ) ( 416 -176 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 416 -176 16 ) ( 416 -160 16 ) ( 400 -160 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 400 -160 96 ) ( 416 -160 96 ) ( 416 -176 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 416 -160 16 ) ( 416 -160 96 ) ( 400 -160 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 416 -176 96 ) ( 416 -160 96 ) ( 416 -160 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 62
+{
+( 352 -160 96 ) ( 352 -176 96 ) ( 352 -176 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 352 -176 96 ) ( 368 -176 96 ) ( 368 -176 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 368 -176 16 ) ( 368 -160 16 ) ( 352 -160 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 352 -160 96 ) ( 368 -160 96 ) ( 368 -176 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 368 -160 16 ) ( 368 -160 96 ) ( 352 -160 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 368 -176 96 ) ( 368 -160 96 ) ( 368 -160 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 63
+{
+( 304 -160 96 ) ( 304 -176 96 ) ( 304 -176 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 304 -176 96 ) ( 320 -176 96 ) ( 320 -176 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 320 -176 16 ) ( 320 -160 16 ) ( 304 -160 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 304 -160 96 ) ( 320 -160 96 ) ( 320 -176 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 320 -160 16 ) ( 320 -160 96 ) ( 304 -160 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 320 -176 96 ) ( 320 -160 96 ) ( 320 -160 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 64
+{
+( 256 -160 96 ) ( 256 -176 96 ) ( 256 -176 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 256 -176 96 ) ( 272 -176 96 ) ( 272 -176 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 272 -176 16 ) ( 272 -160 16 ) ( 256 -160 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 256 -160 96 ) ( 272 -160 96 ) ( 272 -176 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 272 -160 16 ) ( 272 -160 96 ) ( 256 -160 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 272 -176 96 ) ( 272 -160 96 ) ( 272 -160 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+// brush 65
+{
+( 208 -160 96 ) ( 208 -176 96 ) ( 208 -176 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 208 -176 96 ) ( 224 -176 96 ) ( 224 -176 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 224 -176 16 ) ( 224 -160 16 ) ( 208 -160 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 208 -160 96 ) ( 224 -160 96 ) ( 224 -176 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 224 -160 16 ) ( 224 -160 96 ) ( 208 -160 96 ) wall_textures/green_beams_16x16 0 0 0 1 1
+( 224 -176 96 ) ( 224 -160 96 ) ( 224 -160 16 ) wall_textures/green_beams_16x16 0 0 0 1 1
+}
+}
+"

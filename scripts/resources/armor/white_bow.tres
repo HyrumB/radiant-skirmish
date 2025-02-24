@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Armor" load_steps=4 format=3 uid="uid://djrk005vijimk"]
+
+[ext_resource type="Texture2D" uid="uid://l8of6gwads6f" path="res://textures/UI/slots/armor/bow_inv_icon.png" id="1_701iq"]
+[ext_resource type="Texture2D" uid="uid://chmm5v2qwmg6l" path="res://textures/npc/character_parts/bow_white.PNG" id="2_vv2y3"]
+[ext_resource type="Script" path="res://scripts/resources/armor_data.gd" id="3_qwhn2"]
+
+[resource]
+script = ExtResource("3_qwhn2")
+armor_type = "Helmet"
+armor_value = 5.0
+paper_doll_texture = ExtResource("2_vv2y3")
+inv_texture = ExtResource("1_701iq")
+item_type = "Armor"
+item_name = "white bow"
+item_description = "a helmet"
+item_effect = "protects your head"

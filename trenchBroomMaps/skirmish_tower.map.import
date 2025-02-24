@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://rox6nrpomt53"
+path="res://.godot/imported/skirmish_tower.map-2403ccbc82135d0c655ed77ba9b16a80.tres"
+
+[deps]
+
+source_file="res://trenchBroomMaps/skirmish_tower.map"
+dest_files=["res://.godot/imported/skirmish_tower.map-2403ccbc82135d0c655ed77ba9b16a80.tres"]
+
+[params]
+

@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://chaulpn7xer33"
+path="res://.godot/imported/MML2_junkyard_test.map-007af66fd35f832b768b4b0459762b12.tres"
+
+[deps]
+
+source_file="res://trenchBroomMaps/MML2_junkyard_test.map"
+dest_files=["res://.godot/imported/MML2_junkyard_test.map-007af66fd35f832b768b4b0459762b12.tres"]
+
+[params]
+

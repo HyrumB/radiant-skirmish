@@ -1,0 +1,65 @@
+[gd_scene load_steps=13 format=3 uid="uid://3fg5i580o7n5"]
+
+[ext_resource type="Script" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_hykqk"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/composites/selector.gd" id="2_tydjw"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/composites/sequence.gd" id="3_t21g1"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_get_wander_target.gd" id="4_dl0uv"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_start_navigation.gd" id="5_24xha"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/decorators/time_limiter.gd" id="6_sy7he"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/condLeaf_wait_for_destination.gd" id="7_cr6bd"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_stop_navigation.gd" id="8_ofbxe"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/conLeaf_detect_enemy.gd" id="9_wykgt"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/action_leaf.gd" id="10_m840x"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_set_target_unused.gd" id="11_mlis6"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/leaves/action.gd" id="12_cnuvs"]
+
+[node name="Wanderer" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
+script = ExtResource("1_hykqk")
+blackboard = NodePath("@Node@17309")
+actor = NodePath("")
+
+[node name="SelectorComposite" type="Node" parent="."]
+script = ExtResource("2_tydjw")
+
+[node name="wander" type="Node" parent="SelectorComposite"]
+script = ExtResource("3_t21g1")
+
+[node name="NewWanderTarget" type="Node" parent="SelectorComposite/wander"]
+script = ExtResource("4_dl0uv")
+
+[node name="StartNavigation" type="Node" parent="SelectorComposite/wander"]
+script = ExtResource("5_24xha")
+
+[node name="TimeLimiterDecorator" type="Node" parent="SelectorComposite/wander"]
+script = ExtResource("6_sy7he")
+wait_time = 3.0
+
+[node name="WaitForDestination" type="Node" parent="SelectorComposite/wander/TimeLimiterDecorator"]
+script = ExtResource("7_cr6bd")
+
+[node name="StopNavigation" type="Node" parent="SelectorComposite/wander"]
+script = ExtResource("8_ofbxe")
+
+[node name="combat" type="Node" parent="SelectorComposite"]
+script = ExtResource("2_tydjw")
+
+[node name="SequenceComposite" type="Node" parent="SelectorComposite/combat"]
+script = ExtResource("3_t21g1")
+
+[node name="in_range" type="Node" parent="SelectorComposite/combat/SequenceComposite"]
+script = ExtResource("9_wykgt")
+
+[node name="damage" type="Node" parent="SelectorComposite/combat/SequenceComposite"]
+script = ExtResource("10_m840x")
+
+[node name="move_to" type="Node" parent="SelectorComposite/combat"]
+script = ExtResource("3_t21g1")
+
+[node name="ActionLeaf" type="Node" parent="SelectorComposite/combat/move_to"]
+script = ExtResource("11_mlis6")
+
+[node name="ActionLeaf2" type="Node" parent="SelectorComposite/combat/move_to"]
+script = ExtResource("12_cnuvs")
+
+[node name="ActionLeaf3" type="Node" parent="SelectorComposite/combat/move_to"]
+script = ExtResource("12_cnuvs")

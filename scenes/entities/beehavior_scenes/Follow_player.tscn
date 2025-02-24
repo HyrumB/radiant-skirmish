@@ -1,0 +1,48 @@
+[gd_scene load_steps=11 format=3 uid="uid://df8xggoqitffa"]
+
+[ext_resource type="Script" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_1gji3"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/composites/selector.gd" id="2_suu1d"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/composites/sequence.gd" id="3_j5k32"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/conLeaf_detect_enemy.gd" id="4_ojkc3"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/action_leaf.gd" id="5_s3uw6"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_set_target_player.gd" id="6_3gl40"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_start_navigation.gd" id="7_8hgwl"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/decorators/time_limiter.gd" id="8_qymag"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/condLeaf_wait_for_destination.gd" id="9_tfn8n"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_stop_navigation.gd" id="10_lnvgc"]
+
+[node name="Follow_player" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
+script = ExtResource("1_1gji3")
+blackboard = NodePath("@Node@17307")
+actor = NodePath("")
+
+[node name="SelectorComposite" type="Node" parent="."]
+script = ExtResource("2_suu1d")
+
+[node name="attack" type="Node" parent="SelectorComposite"]
+script = ExtResource("3_j5k32")
+
+[node name="in_range" type="Node" parent="SelectorComposite/attack"]
+script = ExtResource("4_ojkc3")
+
+[node name="damage" type="Node" parent="SelectorComposite/attack"]
+script = ExtResource("5_s3uw6")
+
+[node name="follow" type="Node" parent="SelectorComposite"]
+script = ExtResource("3_j5k32")
+
+[node name="ActionLeaf" type="Node" parent="SelectorComposite/follow"]
+script = ExtResource("6_3gl40")
+
+[node name="StartNavigation" type="Node" parent="SelectorComposite/follow"]
+script = ExtResource("7_8hgwl")
+
+[node name="TimeLimiterDecorator" type="Node" parent="SelectorComposite/follow"]
+script = ExtResource("8_qymag")
+wait_time = 0.05
+
+[node name="WaitForDestination" type="Node" parent="SelectorComposite/follow/TimeLimiterDecorator"]
+script = ExtResource("9_tfn8n")
+
+[node name="StopNavigation" type="Node" parent="SelectorComposite/follow"]
+script = ExtResource("10_lnvgc")

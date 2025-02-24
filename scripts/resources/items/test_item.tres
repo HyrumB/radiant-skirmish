@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://c8rpx5b7fj2kd"]
+
+[ext_resource type="Texture2D" uid="uid://c65cq00fers4" path="res://textures/npc/red_wee_lass_bk.png" id="1_fcgnw"]
+[ext_resource type="Script" path="res://scripts/resources/item_data.gd" id="1_otsob"]
+
+[resource]
+script = ExtResource("1_otsob")
+quantity = 1
+inv_texture = ExtResource("1_fcgnw")
+item_type = "consumable"
+item_name = "potato"
+item_description = "a spud"
+item_effect = "+5 hp"

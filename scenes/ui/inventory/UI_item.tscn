@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://ngcgchqyrm6d"]
+
+[ext_resource type="FontFile" uid="uid://mjtjd7y38t3m" path="res://assets/text/Mukta-font/Mukta-Medium.ttf" id="1_u3wdh"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -768.0
+offset_bottom = -592.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 384.0
+offset_bottom = 56.0
+color = Color(0.109804, 0.266667, 0.254902, 1)
+
+[node name="item name" type="RichTextLabel" parent="."]
+layout_mode = 2
+offset_left = 56.0
+offset_top = 8.0
+offset_right = 144.0
+offset_bottom = 36.0
+theme_override_fonts/normal_font = ExtResource("1_u3wdh")
+text = "item name"
+fit_content = true
+scroll_active = false
+
+[node name="item_bkg" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 48.0
+color = Color(0, 0, 0, 1)
+
+[node name="item_texture" type="TextureRect" parent="item_bkg"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://fhgosqrmkfwy"]
+
+[ext_resource type="Script" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_66cr7"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/composites/sequence.gd" id="2_3glom"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_get_wander_target.gd" id="3_kwish"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_start_navigation.gd" id="4_mk6qx"]
+[ext_resource type="Script" path="res://addons/beehave/nodes/decorators/time_limiter.gd" id="5_6i277"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/condLeaf_wait_for_destination.gd" id="6_s3k6f"]
+[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_stop_navigation.gd" id="7_7rajj"]
+
+[node name="Wanderer" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
+script = ExtResource("1_66cr7")
+blackboard = NodePath("@Node@17299")
+actor = NodePath("")
+
+[node name="SequenceComposite" type="Node" parent="."]
+script = ExtResource("2_3glom")
+
+[node name="NewWanderTarget" type="Node" parent="SequenceComposite"]
+script = ExtResource("3_kwish")
+
+[node name="StartNavigation" type="Node" parent="SequenceComposite"]
+script = ExtResource("4_mk6qx")
+
+[node name="TimeLimiterDecorator" type="Node" parent="SequenceComposite"]
+script = ExtResource("5_6i277")
+wait_time = 3.0
+
+[node name="WaitForDestination" type="Node" parent="SequenceComposite/TimeLimiterDecorator"]
+script = ExtResource("6_s3k6f")
+
+[node name="StopNavigation" type="Node" parent="SequenceComposite"]
+script = ExtResource("7_7rajj")

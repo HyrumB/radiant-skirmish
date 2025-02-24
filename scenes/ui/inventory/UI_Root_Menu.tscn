@@ -1,0 +1,190 @@
+[gd_scene load_steps=11 format=3 uid="uid://ccxcax3ap1a1t"]
+
+[ext_resource type="Script" path="res://scripts/UI/Inventory/menuHandler.gd" id="1_68ym6"]
+[ext_resource type="Texture2D" uid="uid://cxpa5kun50p0o" path="res://textures/UI/settings_icon.png" id="2_dskio"]
+[ext_resource type="FontFile" uid="uid://mjtjd7y38t3m" path="res://assets/text/Mukta-font/Mukta-Medium.ttf" id="3_rxa7x"]
+[ext_resource type="Texture2D" uid="uid://dop5w7dky5aee" path="res://textures/UI/char_icon.png" id="3_ypue4"]
+[ext_resource type="Texture2D" uid="uid://caq88h0b1rjca" path="res://textures/UI/key_icon.png" id="4_oq4hw"]
+[ext_resource type="Texture2D" uid="uid://c4haov5rpaugh" path="res://textures/UI/consumables_icon.png" id="5_aopqh"]
+[ext_resource type="Texture2D" uid="uid://bchab8dj1ydno" path="res://textures/UI/equipment_icon.png" id="6_54ljj"]
+[ext_resource type="PackedScene" uid="uid://dygie0f21q64d" path="res://scenes/ui/inventory/UI_equip.tscn" id="8_bjlju"]
+[ext_resource type="PackedScene" uid="uid://8ccqse58be7l" path="res://scenes/ui/inventory/UI_inventory_TEST1.tscn" id="9_sawfk"]
+
+[sub_resource type="FontFile" id="FontFile_8qbu6"]
+fallbacks = Array[Font]([ExtResource("3_rxa7x")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="Pause_Menu" type="Control" node_paths=PackedStringArray("deathMenu", "pauseMenu", "equipScene", "itemsScene")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_68ym6")
+deathMenu = NodePath("deathMenu")
+pauseMenu = NodePath("pauseMenu")
+equipScene = NodePath("ui_equip")
+itemsScene = NodePath("ui_items")
+
+[node name="pauseMenu" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = 25.0
+offset_top = 75.0
+offset_right = 125.0
+offset_bottom = 575.0
+color = Color(0.12549, 0.12549, 0.12549, 1)
+
+[node name="extGmBtn" type="Button" parent="pauseMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.9
+anchor_right = 0.5
+anchor_bottom = 0.9
+offset_left = -43.0
+offset_top = 6.99991
+offset_right = 44.0
+offset_bottom = 37.9999
+text = "Exit Game"
+
+[node name="resumeBtn" type="Button" parent="pauseMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.3
+anchor_right = 0.5
+anchor_bottom = 0.3
+offset_left = -35.0
+offset_top = 273.0
+offset_right = 35.0
+offset_bottom = 304.0
+text = "Resume"
+
+[node name="equipmentBtn" type="TextureButton" parent="pauseMenu"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 15.0
+offset_right = 75.0
+offset_bottom = 65.0
+texture_normal = ExtResource("6_54ljj")
+stretch_mode = 4
+
+[node name="inventoryBtn" type="TextureButton" parent="pauseMenu"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 80.0
+offset_right = 75.0
+offset_bottom = 130.0
+texture_normal = ExtResource("5_aopqh")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="keyItemsBtn" type="TextureButton" parent="pauseMenu"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 145.0
+offset_right = 75.0
+offset_bottom = 195.0
+texture_normal = ExtResource("4_oq4hw")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="statusBtn" type="TextureButton" parent="pauseMenu"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 210.0
+offset_right = 75.0
+offset_bottom = 260.0
+texture_normal = ExtResource("3_ypue4")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="settingsBtn" type="TextureButton" parent="pauseMenu"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 275.0
+offset_right = 75.0
+offset_bottom = 325.0
+texture_normal = ExtResource("2_dskio")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="deathMenu" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -304.0
+offset_right = 512.0
+offset_bottom = 304.0
+
+[node name="Label2" type="Label" parent="deathMenu"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.2
+anchor_right = 0.5
+anchor_bottom = 0.2
+offset_left = -171.5
+offset_right = 171.5
+offset_bottom = 84.0
+theme_override_fonts/font = SubResource("FontFile_8qbu6")
+text = "Connection Lost"
+
+[node name="ResetBtn" type="Button" parent="deathMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.4
+anchor_right = 0.5
+anchor_bottom = 0.4
+offset_left = -200.0
+offset_top = 32.8
+offset_right = -10.0
+offset_bottom = 63.8
+text = "Reestablish Connection"
+
+[node name="extGmBtn2" type="Button" parent="deathMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.45
+anchor_right = 0.5
+anchor_bottom = 0.45
+offset_left = -159.0
+offset_top = 57.4
+offset_right = -53.0
+offset_bottom = 88.4
+text = "Rest for now"
+
+[node name="ui_equip" parent="." instance=ExtResource("8_bjlju")]
+visible = false
+layout_mode = 1
+
+[node name="ui_items" parent="." instance=ExtResource("9_sawfk")]
+visible = false
+
+[connection signal="pressed" from="pauseMenu/extGmBtn" to="." method="_on_ext_gm_btn_pressed"]
+[connection signal="button_down" from="pauseMenu/resumeBtn" to="." method="_on_resume_btn_button_down"]
+[connection signal="pressed" from="pauseMenu/resumeBtn" to="." method="_on_resume_btn_pressed"]
+[connection signal="pressed" from="pauseMenu/equipmentBtn" to="." method="_on_equipment_btn_pressed"]
+[connection signal="pressed" from="pauseMenu/inventoryBtn" to="." method="_on_inventory_btn_pressed"]
+[connection signal="pressed" from="pauseMenu/keyItemsBtn" to="." method="_on_key_items_btn_pressed"]
+[connection signal="pressed" from="pauseMenu/statusBtn" to="." method="_on_status_btn_pressed"]
+[connection signal="pressed" from="pauseMenu/settingsBtn" to="." method="_on_settings_btn_pressed"]
+[connection signal="pressed" from="deathMenu/ResetBtn" to="." method="_on_reset_btn_pressed"]
+[connection signal="button_down" from="deathMenu/extGmBtn2" to="." method="_on_ext_gm_btn_2_button_down"]
+[connection signal="pressed" from="deathMenu/extGmBtn2" to="." method="_on_ext_gm_btn_2_pressed"]

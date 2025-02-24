@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://f21py0tol7vj"]
+
+[ext_resource type="Script" path="res://scripts/NPC/NPC_Wanderer.gd" id="1_1w1uq"]
+[ext_resource type="Texture2D" uid="uid://460c7iim6k8n" path="res://textures/npc/red_wee_lass_fr.png" id="2_osrwv"]
+[ext_resource type="Texture2D" uid="uid://c65cq00fers4" path="res://textures/npc/red_wee_lass_bk.png" id="3_3vmgr"]
+[ext_resource type="PackedScene" uid="uid://cdkol7qx01vug" path="res://scenes/entities/beehavior_scenes/search_destroy.tscn" id="5_miq6p"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onu4u"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kmfoe"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_h5edc"]
+viewport_path = NodePath("BarRoot/SubViewport")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_is4uv"]
+
+[node name="Enemy" type="CharacterBody3D" groups=["NPC", "NPC_friendly"]]
+script = ExtResource("1_1w1uq")
+max_health_points = 100.0
+current_health_points = 100.0
+move_speed = 2.5
+accel = 2.5
+gravity = 9.8
+wander_radius = 30.0
+enable_navigation = true
+
+[node name="body" type="CollisionShape3D" parent="." groups=["NPC", "NPC_friendly"]]
+shape = SubResource("CapsuleShape3D_onu4u")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("CapsuleMesh_kmfoe")
+
+[node name="BHTree" parent="." node_paths=PackedStringArray("blackboard") instance=ExtResource("5_miq6p")]
+blackboard = NodePath("@Node@18746")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_desired_distance = 20.0
+
+[node name="I_Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="head" type="Node3D" parent="."]
+
+[node name="SpriteFront3D" type="Sprite3D" parent="head"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+texture_filter = 2
+texture = ExtResource("2_osrwv")
+
+[node name="SpriteBack3D" type="Sprite3D" parent="head"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0.001)
+texture_filter = 2
+texture = ExtResource("3_3vmgr")
+
+[node name="SpriteFrontSleep" type="Sprite3D" parent="head"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+texture_filter = 2
+texture = ExtResource("2_osrwv")
+
+[node name="RayCast3D" type="RayCast3D" parent="head"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.448)
+
+[node name="BarRoot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05948, 0)
+
+[node name="HealthVisual" type="Sprite3D" parent="BarRoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2173, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_h5edc")
+
+[node name="SubViewport" type="SubViewport" parent="BarRoot"]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(150, 27)
+
+[node name="HealthBar" type="ProgressBar" parent="BarRoot/SubViewport"]
+offset_right = 150.0
+offset_bottom = 27.0
+value = 50.0
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+shape = SubResource("SphereShape3D_is4uv")
+
+[connection signal="timeout" from="I_Timer" to="." method="_on_i_timer_timeout"]
