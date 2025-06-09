@@ -1,4 +1,4 @@
-extends ConditionLeaf
+class_name InRange extends ConditionLeaf
 
 
 func tick(actor: Node, blackboard: Blackboard) -> int:

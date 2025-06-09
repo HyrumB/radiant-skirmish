@@ -19,7 +19,7 @@ func get_texture():
 	return inv_texture
 
 func get_item_type():
-	return item_type
+	return item_type.to_lower()
 
 func get_item_name():
 	return item_name

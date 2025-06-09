@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ondi2p6nipc5"]
 
 [ext_resource type="FontFile" uid="uid://mjtjd7y38t3m" path="res://assets/text/Mukta-font/Mukta-Medium.ttf" id="1_7jat0"]
-[ext_resource type="Script" path="res://scripts/UI/Inventory/UI_inventory_slot.gd" id="1_r444k"]
+[ext_resource type="Script" uid="uid://do7150eya1qb" path="res://scripts/UI/Inventory/UI_inventory_slot.gd" id="1_r444k"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5v7mx"]
 

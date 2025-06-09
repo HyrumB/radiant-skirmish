@@ -7,31 +7,43 @@ extends RigidBody3D
 var scene_path: String = "res://scripts/item_physical.gd" 
 
 var player_in_range = false
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	#item._init()
 	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if player_in_range and Input.is_action_just_pressed("interact"):
 		pickup_item()
 
 func pickup_item():
-		var item = {
-			"quantity": item_quantity,
-			"data": item_data,
-		}
+	var item = {
+		"quantity": item_quantity,
+		"data": item_data,
+	}
+	
+	if GlobalEvents.player_node:
+		GlobalEvents.add_item(item)
+		self.queue_free()
 		
-		if GlobalEvents.player_node:
-			GlobalEvents.add_item(item)
-			self.queue_free()
+func NPC_pickup_item(body):
+	var item = {
+	"quantity": item_quantity,
+	"data": item_data,
+	}
+
+	if body:
+		body.head.add_item(item)
+		self.queue_free()
 
 func _on_area_3d_body_entered(body):
 	if body.is_in_group("Player"):
 		player_in_range = true
 		body.interact_ui.visible = true
-
+	elif body.is_in_group("NPC"):
+		print("npc")
+		NPC_pickup_item(body)
+		
 func _on_area_3d_body_exited(body):
 	if body.is_in_group("Player"):
 		player_in_range = false

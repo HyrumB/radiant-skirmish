@@ -43,9 +43,9 @@ func set_item(new_item):
 	item_effect =  str(item["data"].get_item_effect())
 
 func _on_use_button_pressed() -> void:
-	if item["data"].get_item_type() == "Armor":
+	if item["data"].get_item_type() == "armor":
 		var armor_type = item["data"].get_armor_type()
-		match armor_type.to_lower():
+		match armor_type:
 			
 			"helmet":
 				GlobalEvents.set_helmet(item)

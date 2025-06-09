@@ -1,3 +1,8 @@
+Node3D
+Area3D
+CollisionShape3D
+ActionLeaf
+ConditionLeaf
 Node2D
 ColorRect
 Sprite2D
@@ -7,8 +12,3 @@ CharacterBody3D
 RigidBody3D
 BeehaveTree
 Timer
-AlwaysFailDecorator
-AlwaysSucceedDecorator
-ConditionLeaf
-SequenceComposite
-CollisionShape3D

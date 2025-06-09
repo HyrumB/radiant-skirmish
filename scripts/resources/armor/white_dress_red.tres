@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b4tesxenppp5m" path="res://textures/icons/items/icon_white_dress_red.PNG" id="1_l1ci2"]
 [ext_resource type="Texture2D" uid="uid://bbhk77b72ri21" path="res://textures/npc/character_parts/torso/white_dress_red_fr.PNG" id="1_pl1g5"]
-[ext_resource type="Script" path="res://scripts/resources/armor_data.gd" id="1_q6qjk"]
+[ext_resource type="Script" uid="uid://ygn1oxwlffac" path="res://scripts/resources/armor_data.gd" id="1_q6qjk"]
 
 [resource]
 script = ExtResource("1_q6qjk")

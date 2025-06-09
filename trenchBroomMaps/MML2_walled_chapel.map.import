@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://dn1n5d33g4esw"
+path="res://.godot/imported/MML2_walled_chapel.map-f2b5891f999abc3ab83c8b9ae90f75e3.tres"
+
+[deps]
+
+source_file="res://trenchBroomMaps/MML2_walled_chapel.map"
+dest_files=["res://.godot/imported/MML2_walled_chapel.map-f2b5891f999abc3ab83c8b9ae90f75e3.tres"]
+
+[params]
+

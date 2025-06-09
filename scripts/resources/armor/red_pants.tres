@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c6lixthfmgjfb" path="res://textures/npc/character_parts/pants/red_pants/pelvis.PNG" id="1_el2ub"]
 [ext_resource type="Texture2D" uid="uid://gh6mw4yje07a" path="res://textures/icons/items/icon_pants_red.PNG" id="1_miit6"]
-[ext_resource type="Script" path="res://scripts/resources/pants_data.gd" id="1_yxwdu"]
+[ext_resource type="Script" uid="uid://qsn4ojjdwxh8" path="res://scripts/resources/pants_data.gd" id="1_yxwdu"]
 [ext_resource type="Texture2D" uid="uid://d3sis2fih63t0" path="res://textures/npc/character_parts/pants/red_pants/left_leg.PNG" id="2_nju03"]
 [ext_resource type="Texture2D" uid="uid://dmxne6sixrvju" path="res://textures/npc/character_parts/pants/red_pants/right_leg.PNG" id="3_1m1wu"]
 

@@ -9,7 +9,7 @@ class_name Armor extends Item
 
 var durability = 100
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if durability < 70:
 		emit_signal("update_equipped")
 	elif durability < 30:
@@ -18,7 +18,7 @@ func _physics_process(delta):
 		emit_signal("update_equipped")
 
 func get_armor_type():
-	return armor_type
+	return armor_type.to_lower()
 
 func get_armor_value():
 	return armor_value

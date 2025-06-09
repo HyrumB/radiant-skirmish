@@ -1,3 +1,12 @@
+res://scenes/entities
+res://textures/npc/character_parts/naked_body
+res://textures/npc/character_parts
+res://scenes
+res://trenchBroomMaps
+/home/hyrum/Documents/godot/skirmish/trenchBroomMaps
+res://textures
+res://scripts/resources/items/limbs/
+res://scripts/resources/items/
 res://scripts/resources/armor/
 res://scripts/resources/
 res://scenes/ui/inventory
@@ -5,9 +14,6 @@ res://textures/npc
 res://scripts/NPC
 res://scripts
 res://scripts/NPC/beehavoir_gds
-res://textures
 res://textures/bars
-/home/hyrum/Documents/godot/skirmish/trenchBroomMaps
-res://trenchBroomMaps
 res://
 /home/hyrum/.TrenchBroom/games/

@@ -26,7 +26,7 @@ var Current_Menu = Menu_Types.ROOT
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	process_mode = PROCESS_MODE_ALWAYS
 
 	if Input.is_action_just_pressed("pause") and isPlaying:

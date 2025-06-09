@@ -1,1 +1,8 @@
-res://scripts/NPC/beehavoir_gds/ConLeaf_detect_beings.gd
+res://scenes/player/Player.tscn
+res://scenes/entities/NPC_wanderer.tscn
+res://scenes/Humanoid_paperdoll.tscn
+res://scripts/NPC/NPC_Root_Script.gd
+res://scenes/humanoid_paperdoll.gd
+res://Main.tscn
+res://scenes/entities/NPC_equip.gd
+res://scripts/UI/Inventory/item_physical.gd

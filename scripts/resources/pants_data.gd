@@ -8,5 +8,9 @@ func get_armor_value():
 	return armor_value
 
 func get_paper_doll_texture():
-	var arr : Array = [paper_doll_texture, paper_doll_texture_leg_right, paper_doll_texture_leg_left]
-	return arr
+	var dict : Dictionary = {
+		"pelvis" : paper_doll_texture,
+	 	"right": paper_doll_texture_leg_right,
+	 	"left" : paper_doll_texture_leg_left,
+	}
+	return dict

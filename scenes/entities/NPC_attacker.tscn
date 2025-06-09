@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://f21py0tol7vj"]
 
-[ext_resource type="Script" path="res://scripts/NPC/NPC_Wanderer.gd" id="1_1w1uq"]
+[ext_resource type="Script" uid="uid://dtxehninaj114" path="res://scripts/NPC/NPC_Wanderer.gd" id="1_1w1uq"]
 [ext_resource type="Texture2D" uid="uid://460c7iim6k8n" path="res://textures/npc/red_wee_lass_fr.png" id="2_osrwv"]
 [ext_resource type="Texture2D" uid="uid://c65cq00fers4" path="res://textures/npc/red_wee_lass_bk.png" id="3_3vmgr"]
 [ext_resource type="PackedScene" uid="uid://cdkol7qx01vug" path="res://scenes/entities/beehavior_scenes/search_destroy.tscn" id="5_miq6p"]

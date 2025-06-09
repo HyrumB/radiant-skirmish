@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://ccxcax3ap1a1t"]
 
-[ext_resource type="Script" path="res://scripts/UI/Inventory/menuHandler.gd" id="1_68ym6"]
+[ext_resource type="Script" uid="uid://dr83u1wnvn1sq" path="res://scripts/UI/Inventory/menuHandler.gd" id="1_68ym6"]
 [ext_resource type="Texture2D" uid="uid://cxpa5kun50p0o" path="res://textures/UI/settings_icon.png" id="2_dskio"]
 [ext_resource type="FontFile" uid="uid://mjtjd7y38t3m" path="res://assets/text/Mukta-font/Mukta-Medium.ttf" id="3_rxa7x"]
 [ext_resource type="Texture2D" uid="uid://dop5w7dky5aee" path="res://textures/UI/char_icon.png" id="3_ypue4"]

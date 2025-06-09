@@ -1,16 +1,16 @@
 [gd_scene load_steps=8 format=3 uid="uid://fhgosqrmkfwy"]
 
-[ext_resource type="Script" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_66cr7"]
-[ext_resource type="Script" path="res://addons/beehave/nodes/composites/sequence.gd" id="2_3glom"]
-[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_get_wander_target.gd" id="3_kwish"]
-[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_start_navigation.gd" id="4_mk6qx"]
-[ext_resource type="Script" path="res://addons/beehave/nodes/decorators/time_limiter.gd" id="5_6i277"]
-[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/condLeaf_wait_for_destination.gd" id="6_s3k6f"]
-[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_stop_navigation.gd" id="7_7rajj"]
+[ext_resource type="Script" uid="uid://dhbkl2tra6dlh" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_66cr7"]
+[ext_resource type="Script" uid="uid://co60dm2nihoyb" path="res://addons/beehave/nodes/composites/sequence.gd" id="2_3glom"]
+[ext_resource type="Script" uid="uid://cnse8ysflhruj" path="res://scripts/NPC/beehavoir_gds/actLeaf_get_wander_target.gd" id="3_kwish"]
+[ext_resource type="Script" uid="uid://s1qh08kgc5hu" path="res://scripts/NPC/beehavoir_gds/actLeaf_start_navigation.gd" id="4_mk6qx"]
+[ext_resource type="Script" uid="uid://cfq2br34jtvd7" path="res://addons/beehave/nodes/decorators/time_limiter.gd" id="5_6i277"]
+[ext_resource type="Script" uid="uid://cvrandsx3nxu0" path="res://scripts/NPC/beehavoir_gds/condLeaf_wait_for_destination.gd" id="6_s3k6f"]
+[ext_resource type="Script" uid="uid://cr7whgrejvdhw" path="res://scripts/NPC/beehavoir_gds/actLeaf_stop_navigation.gd" id="7_7rajj"]
 
 [node name="Wanderer" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
 script = ExtResource("1_66cr7")
-blackboard = NodePath("@Node@17299")
+blackboard = NodePath("@Node@30527")
 actor = NodePath("")
 
 [node name="SequenceComposite" type="Node" parent="."]

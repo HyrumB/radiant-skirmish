@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://l8of6gwads6f" path="res://textures/UI/slots/armor/bow_inv_icon.png" id="1_701iq"]
 [ext_resource type="Texture2D" uid="uid://chmm5v2qwmg6l" path="res://textures/npc/character_parts/bow_white.PNG" id="2_vv2y3"]
-[ext_resource type="Script" path="res://scripts/resources/armor_data.gd" id="3_qwhn2"]
+[ext_resource type="Script" uid="uid://ygn1oxwlffac" path="res://scripts/resources/armor_data.gd" id="3_qwhn2"]
 
 [resource]
 script = ExtResource("3_qwhn2")

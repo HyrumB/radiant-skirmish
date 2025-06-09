@@ -1,20 +1,20 @@
 [gd_scene load_steps=11 format=3 uid="uid://df8xggoqitffa"]
 
-[ext_resource type="Script" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_1gji3"]
-[ext_resource type="Script" path="res://addons/beehave/nodes/composites/selector.gd" id="2_suu1d"]
-[ext_resource type="Script" path="res://addons/beehave/nodes/composites/sequence.gd" id="3_j5k32"]
-[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/conLeaf_detect_enemy.gd" id="4_ojkc3"]
-[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/action_leaf.gd" id="5_s3uw6"]
-[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_set_target_player.gd" id="6_3gl40"]
-[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_start_navigation.gd" id="7_8hgwl"]
-[ext_resource type="Script" path="res://addons/beehave/nodes/decorators/time_limiter.gd" id="8_qymag"]
-[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/condLeaf_wait_for_destination.gd" id="9_tfn8n"]
-[ext_resource type="Script" path="res://scripts/NPC/beehavoir_gds/actLeaf_stop_navigation.gd" id="10_lnvgc"]
+[ext_resource type="Script" uid="uid://dhbkl2tra6dlh" path="res://addons/beehave/nodes/beehave_tree.gd" id="1_1gji3"]
+[ext_resource type="Script" uid="uid://bq8f0u80ga68o" path="res://addons/beehave/nodes/composites/selector.gd" id="2_suu1d"]
+[ext_resource type="Script" uid="uid://co60dm2nihoyb" path="res://addons/beehave/nodes/composites/sequence.gd" id="3_j5k32"]
+[ext_resource type="Script" uid="uid://b816x2chxkvac" path="res://scripts/NPC/beehavoir_gds/conLeaf_detect_enemy.gd" id="4_ojkc3"]
+[ext_resource type="Script" uid="uid://bpev41dds61ye" path="res://scripts/NPC/beehavoir_gds/actLeaf_Damage.gd" id="5_ebj5f"]
+[ext_resource type="Script" uid="uid://byl1f405486h3" path="res://scripts/NPC/beehavoir_gds/actLeaf_target_enemy.gd" id="6_nvqwm"]
+[ext_resource type="Script" uid="uid://s1qh08kgc5hu" path="res://scripts/NPC/beehavoir_gds/actLeaf_start_navigation.gd" id="7_8hgwl"]
+[ext_resource type="Script" uid="uid://cfq2br34jtvd7" path="res://addons/beehave/nodes/decorators/time_limiter.gd" id="8_qymag"]
+[ext_resource type="Script" uid="uid://cvrandsx3nxu0" path="res://scripts/NPC/beehavoir_gds/condLeaf_wait_for_destination.gd" id="9_tfn8n"]
+[ext_resource type="Script" uid="uid://cr7whgrejvdhw" path="res://scripts/NPC/beehavoir_gds/actLeaf_stop_navigation.gd" id="10_lnvgc"]
 
 [node name="Follow_player" type="Node" node_paths=PackedStringArray("blackboard", "actor")]
 script = ExtResource("1_1gji3")
-blackboard = NodePath("@Node@17307")
-actor = NodePath("")
+blackboard = NodePath("@Node@39615")
+actor = NodePath("..")
 
 [node name="SelectorComposite" type="Node" parent="."]
 script = ExtResource("2_suu1d")
@@ -25,14 +25,14 @@ script = ExtResource("3_j5k32")
 [node name="in_range" type="Node" parent="SelectorComposite/attack"]
 script = ExtResource("4_ojkc3")
 
-[node name="damage" type="Node" parent="SelectorComposite/attack"]
-script = ExtResource("5_s3uw6")
+[node name="Damage" type="Node" parent="SelectorComposite/attack"]
+script = ExtResource("5_ebj5f")
 
 [node name="follow" type="Node" parent="SelectorComposite"]
 script = ExtResource("3_j5k32")
 
-[node name="ActionLeaf" type="Node" parent="SelectorComposite/follow"]
-script = ExtResource("6_3gl40")
+[node name="TargetEnemy" type="Node" parent="SelectorComposite/follow"]
+script = ExtResource("6_nvqwm")
 
 [node name="StartNavigation" type="Node" parent="SelectorComposite/follow"]
 script = ExtResource("7_8hgwl")

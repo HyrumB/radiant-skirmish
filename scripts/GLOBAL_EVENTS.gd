@@ -18,10 +18,10 @@ var right_equip = []
 var consumables = []
 
 # ---- limbs ----
-var left_arm  : float = 100
-var right_arm : float = 100
-var left_leg  : float = 100
-var right_leg : float = 100
+@export var left_arm  : Limbs = load("res://scripts/resources/items/limbs/Your_Left_Arm.tres")
+@export var right_arm : Limbs = load("res://scripts/resources/items/limbs/Your_Right_Arm.tres")
+@export var left_leg  : Limbs = load("res://scripts/resources/items/limbs/Your_Left_Leg.tres")
+@export var right_leg : Limbs = load("res://scripts/resources/items/limbs/Your_Right_Leg.tres")
 
 # ---- armor/apparal ----
 var helmet : Dictionary = {"quantity": null, "data": null}
@@ -49,7 +49,7 @@ func _ready() -> void:
 	consumables.resize(consumable_size)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _on_traitor_alert(traitor: CharacterBody3D):
@@ -71,7 +71,7 @@ func add_item(item):
 		
 	return false
 	 
-func remove_item(item_type, item_effect):
+func remove_item(_item_type, _item_effect):
 	pass
 	#for i in range(inv.size()):
 		#if inv[i] != null && inv[i]["type"] == item_type && inv[i]["effect"] == item_effect:
@@ -90,37 +90,51 @@ func set_player_reference(player):
 	
 func set_helmet(item):
 	helmet = item
-	player_node.set_armorvalue(item["data"].get_armor_value(), item["data"].get_item_type())
-	player_node.set_equipment_texture(item["data"].get_paper_doll_texture(), item["data"].get_item_type())
+	player_node.set_armorvalue(item["data"].get_armor_value(), item["data"].get_armor_type())
+	player_node.paperdoll.set_equipment_texture(item["data"].get_paper_doll_texture(), item["data"].get_armor_type())
 	emit_signal("update_equipped")
 
-func get_helmet():
-	return helmet["data"]
 
 func set_shirt(item):
 	shirt = item
-	player_node.set_armorvalue(item["data"].get_armor_value(), item["data"].get_item_type())
-	player_node.set_equipment_texture(item["data"].get_paper_doll_texture(), item["data"].get_item_type())
+	player_node.set_armorvalue(item["data"].get_armor_value(), item["data"].get_armor_type())
+	player_node.paperdoll.set_equipment_texture(item["data"].get_paper_doll_texture(), item["data"].get_armor_type())
 	emit_signal("update_equipped")
-
-func get_shirt():
-	return shirt["data"]
+	
 
 func set_pants(item):
 	pants = item
-	player_node.set_armorvalue(item["data"].get_armor_value(), item["data"].get_item_type())
-	player_node.set_equipment_texture(item["data"].get_paper_doll_texture(), item["data"].get_item_type())
+	player_node.set_armorvalue(item["data"].get_armor_value(), item["data"].get_armor_type())
+	player_node.paperdoll.set_equipment_texture(item["data"].get_paper_doll_texture(), item["data"].get_armor_type())
 	emit_signal("update_equipped")
+
+func set_gloves(item):
+	gloves = item
+	player_node.set_armorvalue(item["data"].get_armor_value(), item["data"].get_armor_type())
+	player_node.paperdoll.set_equipment_texture(item["data"].get_paper_doll_texture(), item["data"].get_armor_type())
+	emit_signal("update_equipped")
+	
+func reset_helmet():
+	helmet = {"quantity": null, "data": null}
+	
+func reset_shirt():
+	shirt = {"quantity": null, "data": null}
+	
+func reset_pants():
+		pants = {"quantity": null, "data": null}
+	
+func reset_gloves():
+		gloves = {"quantity": null, "data": null}
+		
+func get_helmet():
+	return helmet["data"]
+
+func get_shirt():
+	return shirt["data"]
 	
 func get_pants():
 	return pants["data"]
 	
-func set_gloves(item):
-	gloves = item
-	player_node.set_armorvalue(item["data"].get_armor_value(), item["data"].get_item_type())
-	player_node.set_equipment_texture(item["data"].get_paper_doll_texture(), item["data"].get_item_type())
-	emit_signal("update_equipped")
-
 func get_gloves():
 	return gloves["data"]
 

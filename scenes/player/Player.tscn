@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dgpjxoygnvyy4"]
 
-[ext_resource type="Script" path="res://scripts/Player/Player.gd" id="1_1fhis"]
-[ext_resource type="Texture2D" uid="uid://460c7iim6k8n" path="res://textures/npc/red_wee_lass_fr.png" id="2_ov3c0"]
+[ext_resource type="Script" uid="uid://p2jkkteqchyf" path="res://scripts/Player/Player.gd" id="1_1fhis"]
+[ext_resource type="PackedScene" uid="uid://d55lopvy7x8i" path="res://scenes/Humanoid_paperdoll.tscn" id="2_tpg5x"]
 [ext_resource type="StyleBox" uid="uid://c0xr3v5mog7do" path="res://textures/bars/bar_back.tres" id="3_io2rr"]
 [ext_resource type="StyleBox" uid="uid://c7o5ikqr3p4ce" path="res://textures/bars/bar_health.tres" id="4_gffqp"]
 [ext_resource type="StyleBox" uid="uid://b1dji7k0thdwb" path="res://textures/bars/bar_stamina.tres" id="5_ciy6o"]
@@ -13,17 +13,11 @@ disable_mode = 2
 floor_max_angle = 0.802851
 script = ExtResource("1_1fhis")
 
-[node name="Body" type="CollisionShape3D" parent="."]
+[node name="HitBox" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_euj4i")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(4, 0, 0, 0, 3.83508, -1.13673, 0, 1.13673, 3.83508, 0, 0.102226, 0.144711)
-texture_filter = 2
-texture = ExtResource("2_ov3c0")
-
-[node name="helmet" type="Sprite3D" parent="."]
-transform = Transform3D(4, 0, 0, 0, 3.83508, -1.13673, 0, 1.13673, 3.83508, 0, 0.102226, 0.143952)
-texture_filter = 2
+[node name="PaperDoll" parent="." instance=ExtResource("2_tpg5x")]
+transform = Transform3D(1, 0, 0, 0, 0.976296, -0.21644, 0, 0.21644, 0.976296, 0, 0.255049, 0.0779303)
 
 [node name="Head_origin_point" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -32,6 +26,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head_origin_point/Rotation_helper"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0815188, -0.0721133)
 
 [node name="Health_bar" type="ProgressBar" parent="Head_origin_point/Rotation_helper/Camera3D"]
 offset_top = 5.0

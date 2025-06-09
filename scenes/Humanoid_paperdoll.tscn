@@ -1,0 +1,142 @@
+[gd_scene load_steps=10 format=3 uid="uid://d55lopvy7x8i"]
+
+[ext_resource type="Script" uid="uid://fompcvgwle3p" path="res://scenes/humanoid_paperdoll.gd" id="1_30vab"]
+[ext_resource type="Texture2D" uid="uid://cyw422vwrd1a0" path="res://textures/npc/character_parts/red_head_fr.PNG" id="2_5jfc0"]
+[ext_resource type="Texture2D" uid="uid://c6iytvq111w2r" path="res://textures/npc/character_parts/naked_body/body_fr.PNG" id="3_vg2n4"]
+[ext_resource type="Texture2D" uid="uid://r4bo11chum60" path="res://textures/npc/character_parts/naked_body/left_arm.PNG" id="4_yoiq1"]
+[ext_resource type="Texture2D" uid="uid://eqm1waow235i" path="res://textures/npc/character_parts/naked_body/right_arm.PNG" id="5_2silu"]
+[ext_resource type="Texture2D" uid="uid://ctf2e7su6q38n" path="res://textures/npc/character_parts/naked_body/left_leg.PNG" id="6_aqx5i"]
+[ext_resource type="Texture2D" uid="uid://b2je3wf11bvc6" path="res://textures/npc/character_parts/naked_body/right_leg.PNG" id="7_r1mwq"]
+[ext_resource type="Texture2D" uid="uid://cqd2kxb7d8rqj" path="res://textures/npc/character_parts/red_head_bk.PNG" id="8_vg2n4"]
+[ext_resource type="Texture2D" uid="uid://ifoit8yxhitn" path="res://textures/npc/character_parts/naked_body/body_bk.PNG" id="9_yoiq1"]
+
+[node name="PaperDoll" type="Node3D"]
+script = ExtResource("1_30vab")
+
+[node name="BodyFront" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Head" type="Sprite3D" parent="BodyFront"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0.001)
+texture_filter = 2
+texture = ExtResource("2_5jfc0")
+
+[node name="Torso" type="Sprite3D" parent="BodyFront"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0.002)
+texture_filter = 2
+texture = ExtResource("3_vg2n4")
+
+[node name="Arm_Left" type="Sprite3D" parent="BodyFront"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0.003)
+texture_filter = 2
+texture = ExtResource("4_yoiq1")
+
+[node name="Arm_Right" type="Sprite3D" parent="BodyFront"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0.003)
+texture_filter = 2
+texture = ExtResource("5_2silu")
+
+[node name="Leg_Left" type="Sprite3D" parent="BodyFront"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0.003)
+texture_filter = 2
+texture = ExtResource("6_aqx5i")
+
+[node name="Leg_Right" type="Sprite3D" parent="BodyFront"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0.003)
+texture_filter = 2
+texture = ExtResource("7_r1mwq")
+
+[node name="BodyBack" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Head" type="Sprite3D" parent="BodyBack"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -0.001)
+texture_filter = 2
+texture = ExtResource("8_vg2n4")
+
+[node name="Torso" type="Sprite3D" parent="BodyBack"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -0.002)
+texture_filter = 2
+texture = ExtResource("9_yoiq1")
+
+[node name="Arm_Left" type="Sprite3D" parent="BodyBack"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -0.003)
+texture_filter = 2
+texture = ExtResource("4_yoiq1")
+
+[node name="Arm_Right" type="Sprite3D" parent="BodyBack"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -0.003)
+texture_filter = 2
+texture = ExtResource("5_2silu")
+
+[node name="Leg_Left" type="Sprite3D" parent="BodyBack"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -0.003)
+texture_filter = 2
+texture = ExtResource("6_aqx5i")
+
+[node name="Leg_Right" type="Sprite3D" parent="BodyBack"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -0.003)
+texture_filter = 2
+texture = ExtResource("7_r1mwq")
+
+[node name="ArmorFront" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Helmet" type="Sprite3D" parent="ArmorFront"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0.002)
+texture_filter = 2
+
+[node name="Shirt" type="Sprite3D" parent="ArmorFront"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0.005)
+texture_filter = 2
+
+[node name="Glove_Left" type="Sprite3D" parent="ArmorFront"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0.004)
+texture_filter = 2
+
+[node name="Glove_Right" type="Sprite3D" parent="ArmorFront"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0.004)
+texture_filter = 2
+
+[node name="Pelvis" type="Sprite3D" parent="ArmorFront"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0.004)
+texture_filter = 2
+
+[node name="Pant_Left" type="Sprite3D" parent="ArmorFront"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0.004)
+texture_filter = 2
+
+[node name="Pant_Right" type="Sprite3D" parent="ArmorFront"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0.004)
+texture_filter = 2
+
+[node name="ArmorBack" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Helmet" type="Sprite3D" parent="ArmorBack"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -0.002)
+texture_filter = 2
+
+[node name="Shirt" type="Sprite3D" parent="ArmorBack"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -0.005)
+texture_filter = 2
+
+[node name="Glove_Left" type="Sprite3D" parent="ArmorBack"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -0.004)
+texture_filter = 2
+
+[node name="Glove_Right" type="Sprite3D" parent="ArmorBack"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -0.004)
+texture_filter = 2
+
+[node name="Pelvis" type="Sprite3D" parent="ArmorBack"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -0.004)
+texture_filter = 2
+
+[node name="Pant_Left" type="Sprite3D" parent="ArmorBack"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -0.004)
+texture_filter = 2
+
+[node name="Pant_Right" type="Sprite3D" parent="ArmorBack"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -0.004)
+texture_filter = 2

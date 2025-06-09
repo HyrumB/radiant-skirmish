@@ -1,8 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b8gqhqid32smv"]
-
-[ext_resource type="Texture2D" uid="uid://da4vr57c0df6d" path="res://textures/wall_textures/green_beams_16x16.png" id="1_1ytjo"]
-
-[resource]
-albedo_texture = ExtResource("1_1ytjo")
-metallic_specular = 0.0
-texture_filter = 2

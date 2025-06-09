@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://bx0v1riimiaqb"]
+[gd_scene load_steps=13 format=3 uid="uid://bx0v1riimiaqb"]
 
-[ext_resource type="Script" path="res://scripts/NPC/NPC_Root_Script.gd" id="1_bjh7g"]
-[ext_resource type="Texture2D" uid="uid://bqao5w1lskfqk" path="res://textures/npc/wee_lass.png" id="2_l1ik4"]
-[ext_resource type="Texture2D" uid="uid://wtdrukyg88x" path="res://textures/npc/horizontal_blue_wee_lass.png" id="2_u7bgi"]
-[ext_resource type="Texture2D" uid="uid://c3s7ku36aqo0u" path="res://textures/npc/wee_lass_back.png" id="3_en7qo"]
+[ext_resource type="Script" uid="uid://frlsp7x2hcvh" path="res://scripts/NPC/NPC_Root_Script.gd" id="1_bjh7g"]
+[ext_resource type="PackedScene" uid="uid://d55lopvy7x8i" path="res://scenes/Humanoid_paperdoll.tscn" id="3_38rmc"]
+[ext_resource type="Script" uid="uid://brwa5dgrst3xe" path="res://scenes/entities/NPC_equip.gd" id="3_vy4xc"]
+[ext_resource type="Resource" uid="uid://063ks4expwf8" path="res://scripts/resources/items/limbs/Left_Arm.tres" id="4_ir2cd"]
 [ext_resource type="PackedScene" uid="uid://cdkol7qx01vug" path="res://scenes/entities/beehavior_scenes/search_destroy.tscn" id="4_wwdfv"]
+[ext_resource type="Resource" uid="uid://dweylf86wtnu0" path="res://scripts/resources/items/limbs/Right_Arm.tres" id="5_vy4xc"]
+[ext_resource type="Resource" uid="uid://bsmxu85rp8rem" path="res://scripts/resources/items/limbs/Left_Leg.tres" id="6_bcfmg"]
+[ext_resource type="Resource" uid="uid://ejav17bttdcn" path="res://scripts/resources/items/limbs/Right_Leg.tres" id="7_op25n"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onu4u"]
 resource_local_to_scene = true
@@ -20,13 +23,11 @@ radius = 1.5
 [node name="Enemy" type="CharacterBody3D" groups=["NPC", "NPC_friendly", "red"]]
 script = ExtResource("1_bjh7g")
 
-[node name="BHTree" parent="." node_paths=PackedStringArray("blackboard", "actor") instance=ExtResource("4_wwdfv")]
-actor_node_path = NodePath("..")
-blackboard = NodePath("@Node@17296")
-actor = NodePath("..")
-
 [node name="Body" type="CollisionShape3D" parent="." groups=["NPC", "NPC_friendly"]]
 shape = SubResource("CapsuleShape3D_onu4u")
+
+[node name="BHtree" parent="." node_paths=PackedStringArray("blackboard") instance=ExtResource("4_wwdfv")]
+blackboard = NodePath("@Node@45418")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 visible = false
@@ -34,13 +35,15 @@ mesh = SubResource("CapsuleMesh_kmfoe")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_desired_distance = 20.0
+avoidance_enabled = true
+keep_y_velocity = false
 
 [node name="AttackCooldownTimer" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
 
 [node name="SleepTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 120.0
 one_shot = true
 
 [node name="AttentionTimer" type="Timer" parent="."]
@@ -48,25 +51,16 @@ wait_time = 110.0
 one_shot = true
 
 [node name="Head" type="Node3D" parent="."]
-
-[node name="SpriteFrontSleep" type="Sprite3D" parent="Head"]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
-visible = false
-texture_filter = 2
-texture = ExtResource("2_u7bgi")
-
-[node name="SpriteFront3D" type="Sprite3D" parent="Head"]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
-texture_filter = 2
-texture = ExtResource("2_l1ik4")
-
-[node name="SpriteBack3D" type="Sprite3D" parent="Head"]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0.001)
-texture_filter = 2
-texture = ExtResource("3_en7qo")
+script = ExtResource("3_vy4xc")
 
 [node name="RayCast3D" type="RayCast3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.448)
+
+[node name="PaperDoll" parent="Head" instance=ExtResource("3_38rmc")]
+left_arm = ExtResource("4_ir2cd")
+right_arm = ExtResource("5_vy4xc")
+left_leg = ExtResource("6_bcfmg")
+right_leg = ExtResource("7_op25n")
 
 [node name="BarRoot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05948, 0)
@@ -92,4 +86,5 @@ value = 50.0
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
 shape = SubResource("SphereShape3D_is4uv")
 
+[connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
 [connection signal="timeout" from="SleepTimer" to="." method="_on_sleep_timer_timeout"]

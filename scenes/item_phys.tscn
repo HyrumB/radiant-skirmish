@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://df60is0nnfvvf"]
 
-[ext_resource type="Script" path="res://scripts/UI/Inventory/item_physical.gd" id="1_73xhy"]
+[ext_resource type="Script" uid="uid://bcuucccc06v7h" path="res://scripts/UI/Inventory/item_physical.gd" id="1_73xhy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oqdb7"]
 

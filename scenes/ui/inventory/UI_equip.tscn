@@ -1,19 +1,15 @@
-[gd_scene load_steps=24 format=3 uid="uid://dygie0f21q64d"]
+[gd_scene load_steps=20 format=3 uid="uid://dygie0f21q64d"]
 
-[ext_resource type="Script" path="res://scripts/UI/Inventory/ui_equip.gd" id="1_8f5oy"]
+[ext_resource type="Script" uid="uid://dyk708gynhhqq" path="res://scripts/UI/Inventory/ui_equip.gd" id="1_8f5oy"]
 [ext_resource type="Texture2D" uid="uid://erd4xwtqydwo" path="res://textures/UI/slots/left_hand_empty_slot.png" id="2_os3ax"]
 [ext_resource type="Texture2D" uid="uid://c6jguxfbdcqal" path="res://textures/icons/icons/empty_slot_helmet.PNG" id="2_rpx4k"]
-[ext_resource type="Texture2D" uid="uid://r4bo11chum60" path="res://textures/npc/character_parts/naked_body/left_arm.PNG" id="2_utdqr"]
 [ext_resource type="Texture2D" uid="uid://bguceo4tnys4f" path="res://textures/icons/icons/empty_slot_chest.PNG" id="3_0jpsu"]
 [ext_resource type="Texture2D" uid="uid://cj0vupm3weonh" path="res://textures/UI/slots/right hand empty slot.png" id="3_k20jf"]
-[ext_resource type="Texture2D" uid="uid://eqm1waow235i" path="res://textures/npc/character_parts/naked_body/right_arm.PNG" id="3_lb6wm"]
 [ext_resource type="Texture2D" uid="uid://boqsvlqdnwgx1" path="res://textures/UI/slots/helmet_empty_slot.png" id="4_codeo"]
-[ext_resource type="Texture2D" uid="uid://ctf2e7su6q38n" path="res://textures/npc/character_parts/naked_body/left_leg.PNG" id="4_et47x"]
 [ext_resource type="Texture2D" uid="uid://burkepsw27oer" path="res://textures/icons/icons/empty_slot_pants.PNG" id="4_p2qn1"]
 [ext_resource type="Texture2D" uid="uid://hhg4vpmffhx1" path="res://textures/icons/icons/empty_slot_gloves.PNG" id="5_8ggpp"]
 [ext_resource type="Texture2D" uid="uid://7bihfisfmd4y" path="res://textures/UI/slots/chest_empty_slot.png" id="5_4603f"]
 [ext_resource type="Texture2D" uid="uid://c6iytvq111w2r" path="res://textures/npc/character_parts/naked_body/body_fr.PNG" id="5_kr7qd"]
-[ext_resource type="Texture2D" uid="uid://b2je3wf11bvc6" path="res://textures/npc/character_parts/naked_body/right_leg.PNG" id="5_l5ypf"]
 [ext_resource type="Texture2D" uid="uid://djffq4xaqcb3t" path="res://textures/UI/slots/greves_empty_slot.png" id="6_5sw2c"]
 [ext_resource type="Texture2D" uid="uid://cyw422vwrd1a0" path="res://textures/npc/character_parts/red_head_fr.PNG" id="6_kcc3h"]
 [ext_resource type="Texture2D" uid="uid://c3fwr2xrkgvt4" path="res://textures/UI/slots/shoes_empty_slot.png" id="7_ytlk3"]
@@ -36,10 +32,6 @@ base_icon_helmet = ExtResource("2_rpx4k")
 base_icon_shirt = ExtResource("3_0jpsu")
 base_icon_pants = ExtResource("4_p2qn1")
 base_icon_gloves = ExtResource("5_8ggpp")
-arm_left_texture = ExtResource("2_utdqr")
-arm_right_texture = ExtResource("3_lb6wm")
-leg_left_texture = ExtResource("4_et47x")
-leg_right_texture = ExtResource("5_l5ypf")
 torso_texture = ExtResource("5_kr7qd")
 head_texture = ExtResource("6_kcc3h")
 
@@ -434,60 +426,60 @@ offset_right = 408.0
 offset_bottom = -232.0
 grow_vertical = 2
 
-[node name="leftArm" type="ColorRect" parent="gear/limbs"]
+[node name="Left_Arm" type="ColorRect" parent="gear/limbs"]
 layout_mode = 2
 offset_right = 56.0
 offset_bottom = 120.0
 color = Color(0.0588235, 1, 0.0588235, 1)
 
-[node name="TextureRect" type="TextureRect" parent="gear/limbs/leftArm"]
+[node name="TextureRect" type="TextureRect" parent="gear/limbs/Left_Arm"]
 layout_mode = 0
 offset_right = 56.0
 offset_bottom = 120.0
 texture = ExtResource("9_2qljp")
 
-[node name="TextureButton" type="TextureButton" parent="gear/limbs/leftArm/TextureRect"]
+[node name="TextureButton" type="TextureButton" parent="gear/limbs/Left_Arm/TextureRect"]
 layout_mode = 0
 offset_right = 56.0
 offset_bottom = 120.0
 
-[node name="rightArm" type="ColorRect" parent="gear/limbs"]
+[node name="Right_Arm" type="ColorRect" parent="gear/limbs"]
 layout_mode = 2
 offset_left = 64.0
 offset_right = 120.0
 offset_bottom = 120.0
 color = Color(0.0588235, 1, 0.0588235, 1)
 
-[node name="TextureRect" type="TextureRect" parent="gear/limbs/rightArm"]
+[node name="TextureRect" type="TextureRect" parent="gear/limbs/Right_Arm"]
 layout_mode = 0
 offset_right = 56.0
 offset_bottom = 120.0
 texture = ExtResource("10_1vpo4")
 
-[node name="TextureButton" type="TextureButton" parent="gear/limbs/rightArm/TextureRect"]
+[node name="TextureButton" type="TextureButton" parent="gear/limbs/Right_Arm/TextureRect"]
 layout_mode = 0
 offset_right = 56.0
 offset_bottom = 120.0
 
-[node name="leftLeg" type="ColorRect" parent="gear/limbs"]
+[node name="Left_Leg" type="ColorRect" parent="gear/limbs"]
 layout_mode = 2
 offset_top = 128.0
 offset_right = 56.0
 offset_bottom = 248.0
 color = Color(0.0588235, 1, 0.0588235, 1)
 
-[node name="TextureRect" type="TextureRect" parent="gear/limbs/leftLeg"]
+[node name="TextureRect" type="TextureRect" parent="gear/limbs/Left_Leg"]
 layout_mode = 0
 offset_right = 56.0
 offset_bottom = 120.0
 texture = ExtResource("11_hp64j")
 
-[node name="TextureButton" type="TextureButton" parent="gear/limbs/leftLeg/TextureRect"]
+[node name="TextureButton" type="TextureButton" parent="gear/limbs/Left_Leg/TextureRect"]
 layout_mode = 0
 offset_right = 56.0
 offset_bottom = 120.0
 
-[node name="rightLeg" type="ColorRect" parent="gear/limbs"]
+[node name="Right_Leg" type="ColorRect" parent="gear/limbs"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 128.0
@@ -495,13 +487,13 @@ offset_right = 120.0
 offset_bottom = 248.0
 color = Color(0.0588235, 1, 0.0588235, 1)
 
-[node name="TextureRect" type="TextureRect" parent="gear/limbs/rightLeg"]
+[node name="TextureRect" type="TextureRect" parent="gear/limbs/Right_Leg"]
 layout_mode = 0
 offset_right = 56.0
 offset_bottom = 120.0
 texture = ExtResource("12_57mpr")
 
-[node name="TextureButton" type="TextureButton" parent="gear/limbs/rightLeg/TextureRect"]
+[node name="TextureButton" type="TextureButton" parent="gear/limbs/Right_Leg/TextureRect"]
 layout_mode = 0
 offset_right = 56.0
 offset_bottom = 120.0
@@ -739,3 +731,8 @@ texture = ExtResource("13_3lfgr")
 layout_mode = 0
 offset_right = 56.0
 offset_bottom = 56.0
+
+[connection signal="pressed" from="gear/outfit/head/TextureRect/TextureButton" to="." method="_on_helmet_texture_button_pressed"]
+[connection signal="pressed" from="gear/outfit/shirt/TextureRect/TextureButton" to="." method="_on_shirt_texture_button_pressed"]
+[connection signal="pressed" from="gear/outfit/pants/TextureRect/TextureButton" to="." method="_on_pants_texture_button_pressed"]
+[connection signal="pressed" from="gear/outfit/gloves/TextureRect/TextureButton" to="." method="_on_gloves_texture_button_pressed"]

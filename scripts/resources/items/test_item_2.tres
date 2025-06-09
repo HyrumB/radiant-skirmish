@@ -1,11 +1,10 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://wxexi1ouufvx"]
 
-[ext_resource type="Script" path="res://scripts/resources/item_data.gd" id="1_1cn4m"]
+[ext_resource type="Script" uid="uid://cbxrj1shab3ie" path="res://scripts/resources/item_data.gd" id="1_1cn4m"]
 [ext_resource type="Texture2D" uid="uid://sobgh6h8bg6f" path="res://textures/wall_textures/green_grass_32x32.png" id="1_b0th5"]
 
 [resource]
 script = ExtResource("1_1cn4m")
-quantity = null
 inv_texture = ExtResource("1_b0th5")
 item_type = "test"
 item_name = "grass"

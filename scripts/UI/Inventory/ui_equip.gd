@@ -6,12 +6,17 @@ extends Control
 @export var base_icon_pants  : CompressedTexture2D
 @export var base_icon_gloves : CompressedTexture2D
 
+@export var base_icon_left_arm : CompressedTexture2D
+@export var base_icon_right_arm : CompressedTexture2D
+
+
+
 
 # ------- paper doll textures---------
-@export var arm_left_texture  : CompressedTexture2D
-@export var arm_right_texture : CompressedTexture2D
-@export var leg_left_texture  : CompressedTexture2D
-@export var leg_right_texture : CompressedTexture2D
+#@export var arm_left_texture  : CompressedTexture2D
+#@export var arm_right_texture : CompressedTexture2D
+#@export var leg_left_texture  : CompressedTexture2D
+#@export var leg_right_texture : CompressedTexture2D
 @export var torso_texture     : CompressedTexture2D
 @export var head_texture      : CompressedTexture2D
 #@export var hair_texture : Texture2D
@@ -22,6 +27,10 @@ extends Control
 @onready var icon_pants_texture   = $gear/outfit/pants/TextureRect
 @onready var icon_gloves_texture  = $gear/outfit/gloves/TextureRect
 
+@onready var icon_left_arm_texture = $gear/limbs/Left_Arm/TextureRect
+@onready var icon_right_arm_texture = $gear/limbs/Right_Arm/TextureRect
+@onready var icon_left_leg_texture = $gear/limbs/Left_Leg/TextureRect
+@onready var icon_right_leg_texture = $gear/limbs/Right_Leg/TextureRect
 
 # ------- basic sprites --------
 @onready var arm_left_sprite  : Sprite2D = $stats/Character_View/Naked/Arm_left
@@ -44,15 +53,15 @@ func _ready():
 	init_sprites()
 	GlobalEvents.update_equipped.connect(_on_update_equipped)
 
-func _process(delta):
+func _process(_delta):
 	pass
 
 
 func init_sprites():
-	arm_left_sprite.texture = arm_left_texture
-	arm_right_sprite.texture = arm_right_texture
-	leg_left_sprite.texture = leg_left_texture
-	leg_right_sprite.texture = leg_right_texture
+	arm_left_sprite.texture = GlobalEvents.left_arm.get_paper_doll_texture()
+	arm_right_sprite.texture = GlobalEvents.right_arm.get_paper_doll_texture()
+	leg_left_sprite.texture = GlobalEvents.left_leg.get_paper_doll_texture()
+	leg_right_sprite.texture = GlobalEvents.right_leg.get_paper_doll_texture()
 	torso_sprite.texture = torso_texture
 	head_sprite.texture = head_texture
 	#hair_sprite.texture = hair_texture
@@ -79,23 +88,42 @@ func equip_shirt(item: Armor):
 	icon_shirt_texture.texture = item.get_texture()
 	shirt_sprite.texture = item.get_paper_doll_texture()
 	
-	
 func equip_pants(item: Armor):
 	icon_pants_texture.texture = item.get_texture()
 	var textures = item.get_paper_doll_texture()
-	if (GlobalEvents.left_leg > 0):
-		pant_left_sprite.texture = textures[2]
-	if (GlobalEvents.right_leg > 0):
-		pant_right_sprite.texture = textures[1]
-	pelvis_sprite.texture = textures[0]
+	if (GlobalEvents.left_leg.get_limb_health() > 0):
+		pant_left_sprite.texture = textures["left"]
+	if (GlobalEvents.right_leg.get_limb_health() > 0):
+		pant_right_sprite.texture = textures["right"]
+	pelvis_sprite.texture = textures["pelvis"]
 	
 func equip_gloves(item: Armor):
 	icon_gloves_texture.texture = item.get_texture()
 	var textures = item.get_paper_doll_texture()
-	if (GlobalEvents.left_arm > 0):
-		arm_left_sprite.texture = textures[1]
-	if (GlobalEvents.right_arm > 0):
-		arm_right_sprite.texture = textures[0]
+	if (GlobalEvents.left_arm.get_limb_health() > 0):
+		arm_left_sprite.texture = textures["left"]
+	if (GlobalEvents.right_arm.get_limb_health() > 0):
+		arm_right_sprite.texture = textures["right"]
 
-func _on_texture_button_pressed() -> void:
-	pass # Replace with function body.
+func _on_helmet_texture_button_pressed() -> void:
+	GlobalEvents.reset_helmet()
+	icon_helmet_texture.texture = base_icon_helmet
+	helmet_sprite.texture = null 
+
+func _on_shirt_texture_button_pressed() -> void:
+	GlobalEvents.reset_shirt()
+	icon_shirt_texture.texture = base_icon_shirt
+	shirt_sprite.texture = null 
+	
+func _on_pants_texture_button_pressed() -> void:
+	GlobalEvents.reset_pants()
+	icon_pants_texture.texture = base_icon_pants
+	pant_left_sprite.texture = null 
+	pant_right_sprite.texture = null
+	pelvis_sprite.texture = null
+
+func _on_gloves_texture_button_pressed() -> void:
+	GlobalEvents.reset_gloves()
+	icon_gloves_texture.texture = base_icon_gloves
+	glove_left_sprite = null
+	glove_right_sprite = null

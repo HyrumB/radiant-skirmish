@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Limbs" load_steps=5 format=3 uid="uid://dc4np65puh5dp"]
+
+[ext_resource type="Texture2D" uid="uid://b2je3wf11bvc6" path="res://textures/npc/character_parts/naked_body/right_leg.PNG" id="1_t6nlm"]
+[ext_resource type="Texture2D" uid="uid://bcrtaoiuxyiju" path="res://textures/npc/character_parts/naked_body/right_leg_hurt.PNG" id="2_jss5l"]
+[ext_resource type="Texture2D" uid="uid://bh25yewqlyb7f" path="res://textures/npc/character_parts/naked_body/right_leg_destroyed.PNG" id="3_ld5uc"]
+[ext_resource type="Script" uid="uid://jq13gwps6k8v" path="res://scripts/resources/limb_data.gd" id="4_ypaed"]
+
+[resource]
+script = ExtResource("4_ypaed")
+limb = "Right Leg"
+paper_doll_texture = ExtResource("1_t6nlm")
+paper_doll_texture_damaged = ExtResource("2_jss5l")
+paper_doll_texture_destroyed = ExtResource("3_ld5uc")
+item_type = "Your Limb"
+item_name = "Right Leg"
+item_description = "a leg, its been with you since birth"
+item_effect = ""
